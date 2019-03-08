@@ -1,3 +1,533 @@
-h1{
-    color: gold;
+*{
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    background-color: #E9E9E9 !important;
+    
+}
+ul{
+    list-style: none;
+}
+#header{
+    .topbar{
+        width: 100%;
+        .container{ 
+            line-height: 35px;
+            font-size: 12px;
+            // text-align: center;
+            font-family: "微软雅黑";
+            color: #999999;
+            a{
+                text-decoration:none;
+                color: #999999;
+                &:hover{
+                    color: #FF7319;
+                }
+            }
+            .right{
+                text-align: center;
+            }
+        }
+    }
+    .navbar{
+        margin: 0;
+    }
+    .navbar-default{
+        .navbar-brand{
+            
+        }
+        .navbar-nav{
+            li{
+                a{
+                    // height: 60px;
+                line-height: 60px;
+                font-size: 18px;
+                color: #333;
+                &:hover{
+                    color: #FF7319;
+                }
+                    }
+                }
+            }
+        }
+
+}
+// 轮播
+#main{
+    // 全背景
+    .main1{
+        background-color: #fff;
+    }
+    // 绝对定位
+    .carousel-inner{
+        position: relative;
+        .item{
+            width: 100%;
+            height: 350px;
+            img{
+                width: 100%;
+                height: 100% !important;
+                
+            }
+        }
+        .reglogin{
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 280px;
+            height: 300px;
+            border-radius: 7px;
+            margin: 2% 8% 2%;
+            background-color: rgba(0,0,0,0.5);
+            text-align: center;
+            color: #fff;
+            font-size: 15px;
+            padding: 20px;
+            p{
+                margin-top: 20px;
+            }
+            b{
+                font-size: 40px;
+                color: #FF7319;
+
+            }
+            .btn{
+                background-color: #ff7000;
+                border: none;
+                margin-bottom: 20px;
+                margin-top: 40px;
+                width: 100%;
+                height: 40px;
+            }
+            p:last-child{
+                color: #ff7000;
+                span{
+                    color: #fff
+                }
+            }
+        }
+    
+    
+    }
+    // 轮播下面的4个格子
+    .box{
+        ul{
+            padding-top:20px;
+            padding-bottom: 20px;  
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0;   
+            li{
+                margin: 0 auto;
+                color: #777;
+                font-size: 12px;
+                .title{
+                    font-size: 16px;
+                    color: #222;
+                }
+            }
+        }
+        .text{
+            height: 50px;
+            .box1{
+                margin-top: 5px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-right: 1px solid #eee;
+                p{
+                   span{
+                    color: #ff7319;
+                    font-size: 20px;
+                   } 
+                }
+            }
+            .box1:last-child{
+                border-right: none;
+            }
+        }
+    }
+    // 新人必备
+    .novice{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        display: flex;
+        a{
+            flex: 1;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .rcontent{
+            flex: 3;
+            padding: 20px;
+            .bade{
+                font-size: 24px;
+                margin: 0;
+                padding-bottom: 15px;
+                color: #333333;
+                border-bottom: 1px solid #ccc;
+                span{
+                    font-size: 16px;
+                    color: #999;
+                    margin-left: 15px;
+                }
+            }
+            .content{
+                display: flex;
+                .leftbox{
+                    flex: 2;
+                    .newbox{
+                        margin-top: 20px;
+                        .tyb{
+                            font-size: 18px;
+                            color: #666;
+                            margin-left: 2px;
+                            .xin{
+                                background: #b184df;
+                                padding: 2px 5px;
+                                border-radius: 2px;
+                                color: #fff;
+                                font-size: 14px;
+                                margin-right: 10px;
+                                position: relative;
+                                top: -1px;
+                                
+                            }
+                            .sanone{
+                                border-color: transparent #ff7139 transparent transparent;
+                                border-style: solid;
+                                border-width: 5px;
+                                display: inline-block;
+                                margin-left: 5px;
+                                margin-right: -4px;
+                            }
+                            .santwo{
+                                border-color: transparent #fef6f3 transparent transparent;
+                                border-style: solid;
+                                border-width: 5px;
+                                display: inline-block;
+                                position: relative;
+                                left: -9px;
+                                z-index: 10;
+                            }
+                            .samll{
+                                font-size: 12px;
+                                color: #ff7139;
+                                font-weight: normal;
+                                border: 1px solid #ff7139;
+                                background: #fef6f3;
+                                padding: 1.5px 3px;
+                                position: relative;
+                                top: -1px;
+                                left: -16px;
+                            }
+                        }
+                        .newcont{
+                            display: flex;
+                            padding: 5px;
+                            li:last-child{
+                                margin-top: 10px;
+                                background-color: #ccc;
+                                color: #fff;
+                                font-size: 16px;
+                                text-align: center;
+                                border: none;
+                                height: 42px;
+                            }
+                            li{
+                                flex: 1;
+                                .bf{
+                                    color: #ff7000;
+                                    font-size: 36px;
+                                    line-height: 36px
+                                }
+                                .mr{
+                                    font-size: 18px;
+                                    line-height: 36px
+                                }
+                            
+                                p{
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                    color: #999;
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                .rbox{
+                    margin-top: 20px;
+                    flex: 1;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    // 定期项目
+    .dingqi{
+        // background-color: #fff;
+        display: flex;
+        .dqleft{
+            padding: 20px;
+            flex: 3;
+            background-color: #fff;
+            .title{
+                font-size: 24px;
+                color: #333;
+                line-height: 30px;
+                border-bottom: 1px solid #ccc;
+                span{
+                    font-size: 16px;
+                    color: #999;
+                }
+            }
+            ul{
+                // display: flex;
+                // flex-direction: column;
+                // li{
+                //     flex: 1;
+                // }
+            }
+            .dqbox{
+                margin-top: 20px;
+                border-bottom: 1px solid #ccc;
+                .tyb{
+                    font-size: 18px;
+                    color: #666;
+                    margin-left: 2px;
+                    .xin{
+                        background: #b184df;
+                        padding: 2px 5px;
+                        border-radius: 2px;
+                        color: #fff;
+                        font-size: 14px;
+                        margin-right: 10px;
+                        position: relative;
+                        top: -1px;
+                        
+                    }
+                    .sanone{
+                        border-color: transparent #ff7139 transparent transparent;
+                        border-style: solid;
+                        border-width: 5px;
+                        display: inline-block;
+                        margin-left: 5px;
+                        margin-right: -4px;
+                    }
+                    .santwo{
+                        border-color: transparent #fef6f3 transparent transparent;
+                        border-style: solid;
+                        border-width: 5px;
+                        display: inline-block;
+                        position: relative;
+                        left: -9px;
+                        z-index: 10;
+                    }
+                    .samll{
+                        font-size: 12px;
+                        color: #ff7139;
+                        font-weight: normal;
+                        border: 1px solid #ff7139;
+                        background: #fef6f3;
+                        padding: 1.5px 3px;
+                        position: relative;
+                        top: -1px;
+                        left: -16px;
+                    }
+                }
+                .newcont{
+                    display: flex;
+                    padding: 5px;
+                    li:last-child{
+                        margin-top: 10px;
+                        background-color: #ccc;
+                        color: #fff;
+                        font-size: 16px;
+                        text-align: center;
+                        border: none;
+                        height: 42px;
+                    }
+                    li{
+                        flex: 1;
+                        .bf{
+                            color: #ff7000;
+                            font-size: 36px;
+                            line-height: 36px
+                        }
+                        .mr{
+                            font-size: 18px;
+                            line-height: 36px
+                        }
+                    
+                        p{
+                            line-height: 30px;
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .dqright{
+            flex: 1;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            .dq1{
+                flex: 1;
+                background-color: #fff;
+                img{
+                    width: 100%;
+                    // height: 100%;
+                }
+                .textcont{
+                    color:#888;
+                    font-size: 14px;
+                    padding: 10px;
+                    .li{
+                        
+                        line-height: 14px;
+                    }
+                }
+                &:nth-child(2){
+                    margin:20px 0 20px 0;
+                }
+                
+            }
+        }
+    }
+}
+// 公共样式 标题
+.title{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    
+    .stitle{
+        margin-left: 5px;
+        color: #333;
+        font-size: 18px;
+        border-bottom: 2px solid #ff6700;
+        margin-bottom: -1px;
+    }
+    a{
+        text-decoration: none;
+        color: #999
+    }
+}
+// 尾部
+#footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    // 合作伙伴
+    .cooperation{
+        p{
+            font-size: 17px;
+            line-height: 40px;
+            margin-right: 20px;
+            color: #444; 
+            
+        }
+        .cplist{    
+            margin-top: 20px;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-around;
+            img{
+                width: 100%;
+            }
+        }
+        // 尾部第一部分
+        .f1{
+            
+            .l1{
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                li{
+                    p{
+                        margin-bottom: 0;
+                        line-height: 30px;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        text-align: center;
+                        color: #666;
+                        font-size:14px;
+                        line-height: 30px;
+                    }
+                }
+            }
+            .c1{
+                display: flex;
+                justify-content: space-around;
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+            }
+            .r1{
+                display: flex;
+                justify-content: space-around;
+               p{   
+                font-size: 16px;
+                color: #666;
+                //    text-align: center;
+                   line-height: 30px;
+               }
+               .num{
+                font-size: 30px;
+                color: #333;
+               }
+            }
+        }
+        .yq{
+            margin-top: 30px;
+            ul{
+                display: flex;
+                li{
+                    margin-right: 20px;
+                    color: #666;
+                    font-size:14px;
+                    line-height: 30px;
+                }
+            }
+        }
+        // 最后的页脚
+        .end{
+            height: 100%;
+            background-color: #666666;
+           .endtext{
+               margin-top: 20px;
+               display: flex;
+                flex-direction: column;
+            //    justify-content: center;
+               align-items: center;
+               span{
+                   font-size: 16px;
+                   color: #fff;
+                   line-height: 30px;
+               }
+               span:last-child{
+                   margin-bottom: 30px;
+               }
+           }
+        }
+        
+    }
 }

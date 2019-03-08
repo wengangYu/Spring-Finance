@@ -1,13 +1,581 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>春天金融</title>
+    <!-- 引入当前页面的样式 -->
     <link rel="stylesheet" href="./dist/css/index.min.css">
+    <!-- 引入btcss -->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>我是主页</h1>
+    <!-- 头部 -->
+    <div id="header">
+        <!-- 顶部条 -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="left col-md-4  col-sm-6 col-xs-6 row">
+                        <div class="col-md-4">
+                            <img src="./assets/imgs/weixin.png" alt="" srcset="">
+                            <span>微信出借</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="glyphicon glyphicon-phone"></span>
+                            <span>app下载</span>
+                        </div>
+                        <div class="col-md-4">
+
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            <span>4000790080</span>
+                        </div>
+                    </div>
+                    <div class="left col-md-4"></div>
+                    <div class="right col-md-4 row col-sm-6 col-xs-6">
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-3">
+                                <a href="#">登录</a>
+                            </div>
+                        <div class="col-md-3">
+                            <a href="#">快速注册</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#">帮助中心</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 导航 -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+
+                        <img src="./assets/imgs/logonews.png" alt="">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+                        <li>
+                            <a href="#">我要出借</a>
+                        </li>
+                        <li>
+                            <a href="#">我要借款</a>
+                        </li>
+                        <li>
+                            <a href="#">信息披露</a>
+                        </li>
+                        <li>
+                            <a href="#">安全保障</a>
+                        </li>
+                        <li>
+                            <a href="#">我的账户</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+
+
+    </div>
+    <!-- 主体 -->
+    <div id="main">
+        <div class="main1">
+            <!-- 轮播 -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="./assets/imgs/banner18.jpg" alt="...">
+
+                    </div>
+                    <div class="item">
+                        <img src="./assets/imgs/bannerAtc.jpg" alt="...">
+                    </div>
+                    <div class="reglogin">
+                        <p>借款约定年化利率 </p>
+                        <b>8%-13.5%</b>
+                        <button type="button" class="btn btn-danger">注册领取2018元红包</button>
+                        <p>
+                            <span>已有账号?</span>马上登录</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 轮播下面的4个格子 -->
+            <div class="box container">
+                <ul class="row">
+                    <li class="col-md-3 col-xs-3 col-sm-3 row">
+                        <img src="./assets/imgs/shouyis.png" alt="" class="col-md-4">
+                        <div class="col-md-8">
+                            <p class="title">银行存管</p>
+                            <p>账户资金由银行</p>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-xs-3 col-sm-3 row">
+                        <img src="./assets/imgs/shouyis.png" alt="" class="col-md-4">
+                        <div class="col-md-8">
+                            <p class="title">银行存管</p>
+                            <p>账户资金由银行存管</p>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-xs-3 col-sm-3 row">
+                        <img src="./assets/imgs/shouyis.png" alt="" class="col-md-4">
+                        <div class="col-md-8">
+                            <p class="title">银行存管</p>
+                            <p>账户资金由银行存管</p>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-xs-3 col-sm-3 row">
+                        <img src="./assets/imgs/shouyis.png" alt="" class="col-md-4">
+                        <div class="col-md-8">
+                            <p class="title">银行存管</p>
+                            <p>账户资金由银行存管</p>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="text row">
+                    <div class="box1 col-md-4 col-xs-4 col-sm-4">
+                        <p>累计注册人数:
+                            <span>22222225</span> 人</p>
+                    </div>
+                    <div class="box1 col-md-4 col-xs-4 col-sm-4">
+                        <p>累计交易金额:
+                            <span>22222225</span> 元</p>
+                    </div>
+                    <div class="box1 col-md-4 col-xs-4 col-sm-4">
+                        <p>安全运营天数:
+                            <span>22222225</span> 天</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新人必备 -->
+        <div class="container">
+            <div class="novice">
+                <!-- 左侧红包.定宽 -->
+                <a href="#">
+                    <img src="./assets/imgs/hongbao.png" alt="">
+                </a>
+
+                <!-- 右边内容 自适应-->
+                <div class="rcontent">
+                    <!-- 标题 -->
+                    <p class="bade">
+                        新手专享
+                        <span>
+                            新手标限投3次
+                        </span>
+                    </p>
+                    <!-- 内容盒子 -->
+                    <div class="content">
+                        <!-- 左侧 -->
+                        <div class="leftbox">
+                            <div class="newbox">
+                                <p class="tyb">
+                                    <span class="xin">新</span>车融宝1820071502
+                                    <span class="sanone"></span>
+                                    <span class="santwo"></span>
+                                    <span class="samll">单笔限投30,000.00元 累计可投90,000.00元</span>
+                                </p>
+                                <ul class="newcont">
+                                    <li>
+                                        <span class="bf">13.2</span>
+                                        <span>%</span>
+                                        <p class="shouyis">借款约定年化利率</p>
+                                    </li>
+                                    <li>
+                                        <span class="mr">15</span>
+                                        <span>个月</span>
+                                        <p class="shouyis">项目期限</p>
+                                    </li>
+                                    <li>
+                                        <span class="mr">200,000.00</span>
+                                        <span>元</span>
+                                        <p class="shouyis">项目金额</p>
+                                    </li>
+                                    <li class=" btn btn-success">
+                                        还款中
+                                    </li>
+                                </ul>
+                                <!-- 第二个 -->
+
+                            </div>
+                            <div class="newbox">
+                                <p class="tyb">
+                                    <span class="xin">新</span>车融宝1820071502
+                                    <span class="sanone"></span>
+                                    <span class="santwo"></span>
+                                    <span class="samll">单笔限投30,000.00元 累计可投90,000.00元</span>
+                                </p>
+                                <ul class="newcont">
+                                    <li>
+                                        <span class="bf">13.2</span>
+                                        <span>%</span>
+                                        <p class="shouyis">借款约定年化利率</p>
+                                    </li>
+                                    <li>
+                                        <span class="mr">15</span>
+                                        <span>个月</span>
+                                        <p class="shouyis">项目期限</p>
+                                    </li>
+                                    <li>
+                                        <span class="mr">200,000.00</span>
+                                        <span>元</span>
+                                        <p class="shouyis">项目金额</p>
+                                    </li>
+                                    <li class=" btn btn-success">
+                                        还款中
+                                    </li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <!-- 右侧图片 -->
+                        <div class="rbox">
+                            <img src="./assets/imgs/saomao.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 定期项目 -->
+        <div class="container">
+            <div class="dingqi">
+                <div class="dqleft">
+                    <!-- 标题 -->
+                    <p class="title">
+                        定期项目
+                        <span>优质资产 信息透明</span>
+                    </p>
+                    <!-- 内容 列表-->
+                    <ul>
+                        <!-- 第一个列表 -->
+                        <li class="dqbox">
+                            <p class="tyb">
+                                <span class="xin">新</span>车融宝1820071502
+
+                            </p>
+                            <ul class="newcont">
+                                <li>
+                                    <span class="bf">13.2</span>
+                                    <span>%</span>
+                                    <p class="shouyis">借款约定年化利率</p>
+                                </li>
+                                <li>
+                                    <span class="mr">15</span>
+                                    <span>个月</span>
+                                    <p class="shouyis">项目期限</p>
+                                </li>
+                                <li>
+                                    <span class="mr">200,000.00</span>
+                                    <span>元</span>
+                                    <p class="shouyis">项目金额</p>
+                                </li>
+                                <li>
+                                    <span class="mr">先息后本</span>
+                                    <p class="shouyis">还款方式</p>
+                                </li>
+                                <li class=" btn btn-success">
+                                    还款中
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dqbox">
+                            <p class="tyb">
+                                <span class="xin">新</span>车融宝1820071502
+
+                            </p>
+                            <ul class="newcont">
+                                <li>
+                                    <span class="bf">13.2</span>
+                                    <span>%</span>
+                                    <p class="shouyis">借款约定年化利率</p>
+                                </li>
+                                <li>
+                                    <span class="mr">15</span>
+                                    <span>个月</span>
+                                    <p class="shouyis">项目期限</p>
+                                </li>
+                                <li>
+                                    <span class="mr">200,000.00</span>
+                                    <span>元</span>
+                                    <p class="shouyis">项目金额</p>
+                                </li>
+                                <li>
+                                    <span class="mr">先息后本</span>
+                                    <p class="shouyis">还款方式</p>
+                                </li>
+                                <li class=" btn btn-success">
+                                    还款中
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dqbox">
+                            <p class="tyb">
+                                <span class="xin">新</span>车融宝1820071502
+
+                            </p>
+                            <ul class="newcont">
+                                <li>
+                                    <span class="bf">13.2</span>
+                                    <span>%</span>
+                                    <p class="shouyis">借款约定年化利率</p>
+                                </li>
+                                <li>
+                                    <span class="mr">15</span>
+                                    <span>个月</span>
+                                    <p class="shouyis">项目期限</p>
+                                </li>
+                                <li>
+                                    <span class="mr">200,000.00</span>
+                                    <span>元</span>
+                                    <p class="shouyis">项目金额</p>
+                                </li>
+                                <li>
+                                    <span class="mr">先息后本</span>
+                                    <p class="shouyis">还款方式</p>
+                                </li>
+                                <li class=" btn btn-success">
+                                    还款中
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dqbox">
+                            <p class="tyb">
+                                <span class="xin">新</span>车融宝1820071502
+
+                            </p>
+                            <ul class="newcont">
+                                <li>
+                                    <span class="bf">13.2</span>
+                                    <span>%</span>
+                                    <p class="shouyis">借款约定年化利率</p>
+                                </li>
+                                <li>
+                                    <span class="mr">15</span>
+                                    <span>个月</span>
+                                    <p class="shouyis">项目期限</p>
+                                </li>
+                                <li>
+                                    <span class="mr">200,000.00</span>
+                                    <span>元</span>
+                                    <p class="shouyis">项目金额</p>
+                                </li>
+                                <li>
+                                    <span class="mr">先息后本</span>
+                                    <p class="shouyis">还款方式</p>
+                                </li>
+                                <li class=" btn btn-success">
+                                    还款中
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="dqright">
+                    <div class="dq1">
+                        <div class="title">
+                            <span class="stitle">平台公告</span>
+                            <a href="#">更多</a>
+                        </div>
+                        <!-- 内容列表 -->
+                        <ul class="textcont">
+                            <li>关于公司新增业务相关账户及存管…</li>
+
+                            <li>春天金融2019年春节放假安排…</li>
+
+                            <li>春天金融2019年元旦放假安排…</li>
+
+                            <li>关于合规展期恢复经营方案投票结…</li>
+
+                            <li>春天金融办公地址搬迁通知</li>
+
+                            <li>2018年国庆节放假安排公告</li>
+
+                        </ul>
+                    </div>
+                    <div class="dq1">
+                        <div class="title">
+                            <span class="stitle">活动专区</span>
+                        </div>
+                        <img src="./assets/imgs/lun926ss.jpg" alt="">
+                    </div>
+                    <div class="dq1">
+                        <div class="title">
+                            <span class="stitle">行业资讯</span>
+                            <a href="#">更多</a>
+                        </div>
+                        <ul class="textcont">
+                            <li>春天金融：互金网贷释放明确监管…</li>
+
+                            <li>
+                                春天金融：政策监管差异化举措促…</li>
+
+                            <li>为真正的P2P发声！网贷之家、…</li>
+
+                            <li>春天金融：互金网贷行业阵痛之后…</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 尾部 -->
+    <div id="footer">
+        <!-- 合作伙伴 -->
+        <div class="cooperation">
+            <div class="container">
+                <!-- 标题 -->
+                <div class="title">
+                    <p class="stitle">
+                        合作伙伴
+                    </p>
+                </div>
+                <!-- 合作伙伴列表 -->
+                <ul class="cplist">
+                    <li>
+                        <img src="./assets/imgs/logo_02.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./assets/imgs/logo_01.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./assets/imgs/logo_11.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./assets/imgs/logo_12.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./assets/imgs/luodian.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./assets/imgs/rongguan.png" alt="">
+                    </li>
+                </ul>
+                <!-- 尾部第一部分 -->
+                <div class="f1 row">
+                    <ul class="l1 col-md-4">
+                        <li>
+
+                            <p>
+                                <img src="./assets/imgs/icon-1.png" alt="">公司介绍</p>
+                            <span>平台简介</span>
+                            <span>管理团队</span>
+                            <span>企业资质</span>
+
+                        </li>
+                        <li>
+                            <li>
+                                <p>
+                                    <img src="./assets/imgs/icon-2.png" alt="">帮助中心</p>
+                                <span>网站公告</span>
+                                <span>常见问题</span>
+                                <span>招贤纳士</span>
+
+                            </li>
+                        </li>
+                        <li>
+                            <li>
+                                <p>
+                                    <img src="./assets/imgs/icon-3.png" alt="">新手指南</p>
+                                <span>安全保障</span>
+                                <span>我要出借</span>
+                                <span>网贷知识</span>
+
+                            </li>
+                        </li>
+                    </ul>
+                    <ul class="c1 col-md-4">
+                        <img src="./assets/imgs/weixin-1.png" alt="">
+                        <img src="./assets/imgs/APP_cords.png" alt="">
+                    </ul>
+                    <div class="r1 col-md-4">
+                        <div>
+                            <p>服务号码:</p>
+                            <p class="num">
+                                <span>
+                                    <img src="./assets/imgs/phones.png" alt="">
+                                </span>
+                                400-079-0080</p>
+                            <p>周一至周五:9:30-18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 友情链接 -->
+                <div class="yq">
+                    <ul>
+                        <li>友情链接 : </li>
+                        <li>网贷之家</li>
+                        <li>网贷天眼</li>
+                        <li>上饶银行</li>
+                        <li>安融征信</li>
+                        <li>e签宝</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 尾部最后yibu部分 -->
+            <div class="end container-fluid">
+                <div class="endtext">
+                    <span>©2015 春天金融 All Rights Reserved | 深圳前海阳睿互联网金融服务有限公司 粤ICP备16103985号-1</span>
+                    <span>公司地址：深圳市前海深港合作区梦海大道5033号前海卓越金融中心（一期）7号楼2807A</span>
+                    <span>
+                        <a href="#">
+                            <img src="./assets/imgs/dbaq_2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/imgs/dbaq_3.png" alt="">
+                        </a>
+
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入js jq -->
+    <script src="./lib/jquery.js"></script>
+    <!-- 引入btjs  -->
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
