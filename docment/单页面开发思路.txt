@@ -1,0 +1,63 @@
+SPA：单页web应用
+    主体页面只有一个，主体页面内进行局部DOM节点切换
+
+
+核心关键函数：
+    onhashchange 
+    当hash值发生改变，就会触发此函数！
+    注意：加载页面或F5时，不会触发此函数！
+
+
+
+单页开发实现思路:
+    通过a标签的锚点及onhashchange的结合使用来实现
+
+    1. 书写对应的导航a标签，写上对应的hash值
+        <a href='#shop'>购物</a>
+    
+    2. JS内监听onhashchange函数，根据当前hash值，进行页面模块加载
+        window.onhashchange = hashFuc
+        function hashFuc(){
+            switch(localtion.hash){
+                case '#shop': $('选中容器').load('子页面模块的地址'); break;
+                
+                default: 默认加载主页; (容错处理)
+            }
+        }
+
+
+    3. 因为onhashchange刷新（页面加载）时不会触发，所以需要在ready函数内，手动调用一次，
+    实现初始化模块加载
+        $(function(){
+            //监听hash句柄
+            window.onhashchange = hashFuc
+
+            //初始化加载模块
+            hashFuc()
+        })
+
+
+标签选中
+    1. 书写静态的标签组件
+    2. 选中当前点击的标签组件，改变背景色
+        <button onclick='clickShop()'>购物</button>
+        clickShop(e){
+            //e.target === <button onclick='clickShop()'>购物</button>
+
+            //点亮当前组件
+            $(e.target).css('backgroundColor','red')
+        }
+    3. 使用全局变量保存上一轮点击的元素，清掉背景色
+        var up_btn; //上一轮点击的元素
+
+        clickShop(e){
+            //e.target === <button onclick='clickShop()'>购物</button>
+            
+            //熄灭上一轮亮的元素
+            if(up_btn)  //如果变量不为空
+                up_btn.css('backgroundColor','')         
+
+            //点亮当前组件
+            up_btn = $(e.target)
+            up_btn.css('backgroundColor','red')
+        }

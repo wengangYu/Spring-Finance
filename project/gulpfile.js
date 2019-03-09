@@ -14,7 +14,7 @@ var reload = browserSync.reload
 //参数2： [] 数组内可以书写依赖任务(书写名字即可)
 //参数3： 任务回调函数
 //
-gulp.task('default', ['less'], () => {
+gulp.task('default', ['less','images'], () => {
 
         //参数1：要监听的文件路径（其实就是src）
         //参数2：要执行的任务
