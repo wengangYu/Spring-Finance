@@ -1,0 +1,139 @@
+#main {
+
+    // 左边导航栏样式
+    .personal-box {
+        .left-box {
+            margin-top: 10px;
+
+            .list-group-item {
+                padding: 0;
+                color: #337ab7;
+
+                &>span {
+                    outline: none;
+                    display: block;
+                    padding: 10px 15px;
+                    background: #F5F5F5;
+                    text-decoration: none;
+                }
+
+                ul>li {
+                    height: 40px;
+                    padding-left: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    // 账户信息
+    #Account-information {
+        margin-top: 10px;
+
+        .panel-heading {
+            background: #fff;
+
+            .head-img {
+                height: 170px;
+                width: 200px;
+                margin-left: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .message-user {
+                font-size: 18px;
+                color: rgb(2, 83, 116);
+
+                p {
+                    line-height: 30px;
+
+                    .fir {
+                        color: rgb(189, 7, 7);
+                    }
+                }
+            }
+        }
+
+        // 右边内容 下
+        .panel-body {
+            .money {
+                font-size: 18px;
+
+                span {
+                    color: #337ab7;
+                }
+            }
+
+            .btn-box {
+                height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 15px 0;
+
+                button {
+                    margin: 0 6px;
+                    height: 50px;
+                    width: 120px;
+                    font-size: 18px;
+                    outline: none;
+                }
+            }
+
+            .renzhen {
+                text-align: center;
+
+                .col-xs-4 {
+                    margin-bottom: 20px;
+
+                    .rz-box {
+                        margin: 10px;
+
+                        .col-xs-9>p {
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+    // 借款项目   账户流水
+    #jiekuan,#liushui{
+        margin-top: 10px;
+        .panel-body{
+            padding: 0;
+        }
+    }
+    // 充值明细
+    #chongzhi{
+        margin-top: 10px;
+        .panel-body{
+            padding: 0;
+        }
+        .panel-heading{
+            display: flex;
+            justify-content: space-between;
+            line-height: 34px;
+        }
+    }
+    // 实名认证 
+    #renzhen,#personal{
+        margin-top: 10px;
+    }
+    // 个人信息
+    #personal{
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
