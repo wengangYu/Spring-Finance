@@ -1,8 +1,8 @@
-本次项目地址:https://github.com/wengangYu/Spring-Finance.git
-模仿 网站:https://www.79jr.com/
-git status 查看代码状态
-git add .  纳入版本控制
-git commit -m'描述'
+??????????:https://github.com/wengangYu/Spring-Finance.git
+??? ???:https://www.79jr.com/
+git status ????????
+git add .  ????汾????
+git commit -m'????'
 git push https://github.com/wengangYu/Spring-Finance.git
 git config --global user.email 'yu18081588820@outlook.com'
 git config --global user.name 'gavin'
