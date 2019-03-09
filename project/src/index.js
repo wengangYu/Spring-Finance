@@ -12,6 +12,7 @@ $(function(){
             case '#information': $('#main').load('../moulde/information.html');break;
             case '#security': $('#main').load('../moulde/security.html');break;
             case '#myaccount': $('#main').load('../moulde/myaccount.html');break;
+            case '#reg':$('#main').load('../moulde/reg.html');break;
             default: $('#main').load('../moulde/index.html'); break;
         }
     }

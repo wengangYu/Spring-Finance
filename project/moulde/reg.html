@@ -1,0 +1,56 @@
+<div class="reg">
+    <div class="form" >
+        <form action="http://localhost:80/reg.php" method="POST" >
+                <p class="title3">注册</p>
+                <div class="row">
+                    <span>
+                        <img src="../assets/imgs/phone1.png" alt="">
+                    </span>
+                    <input type="text" name="username" placeholder="请输入用户名" id='name'>
+                </div>
+                <!-- 报错盒子 -->
+                <div class="err name">
+                </div>
+                <div class="row">
+                    <span>
+                        <img src="../assets/imgs/pwd1.png" alt="">
+                    </span>
+                    <input type="password" name="pwd" placeholder="请输入密码" id="pwd">
+                </div>
+                <div class="err pwd">
+                </div>
+                <div class="row">
+                    <span>
+                        <img src="../assets/imgs/pwd1.png" alt="">
+                    </span>
+                    <input type="password" name="pwd1" placeholder="请再次输入密码" id="pwd1">
+                </div>
+                <div class="err pwd1">
+                </div>
+                <!-- 协议 -->
+                <div class="chec">
+                    <input type="checkbox" checked name="xieyi" id="xieyi">
+                    "注册表示已阅读并同意以下协议"</br>
+                    <span>
+                            《春天金融注册服务协议》《e签宝电子签名用户授权协议》
+                    </span>
+                </div>
+                <div class="err xy">
+                </div>
+                <!-- 注册按钮 -->
+                <input class="btn" type="submit" value="注册并领取红包" id="btn">
+                <div class="login">
+                        <span>已有账号?</span>
+                        <a href="#">马上登录</a>
+                </div>
+                <!-- 总报错盒子 -->
+                <div class="err all">
+        
+                </div>
+        </form>
+    </div>
+    
+</div>
+
+<!-- 引入注册的js -->
+<script src="./src/reg.js"></script>

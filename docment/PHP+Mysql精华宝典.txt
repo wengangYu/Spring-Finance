@@ -1,0 +1,116 @@
+﻿PHP
+	连接数据库：
+	<?php
+		$conn = mysqli_connect('localhost','root','root','webdb',3306) or die('Error');
+	?>
+
+	执行sql语句：
+	$data = mysqli_query($conn,"SELECT * FROM user");
+
+	获取一条数据：
+	$row=mysqli_fetch_assoc($data)
+
+	遍历所有返回数据：
+	while($row=mysqli_fetch_assoc($data)){
+		echo '用户名:'.$row['username'].' 密码:'.$row['pwd'].'<br/>';
+	}
+
+	总数据条数：
+	mysqli_num_rows($sql)
+	
+	
+	
+	PHP设置格式：
+		<?php header('Content-Type: text/html;charset=utf-8'); ?>
+		
+	PHP获取浏览器参数：
+		$_POST['参数字段名'] or  $_GET['参数字段名']
+		删除某个属性
+		unset($data['属性名']);
+		
+	PHP重定向浏览器页面：
+		//跳转页面
+		header("Location: http://xxxxxx/login.html?iserror=true");  
+		
+	PHP对象转JSON格式:
+		json_encode($xxxx);
+		
+	PHP开启session:
+		php.ini里把session.auto_start = 0设置为session.auto_start = 1 开启session记录
+	设置session过期时间
+		php.ini内，session.cookie_lifetime = 600       单位：秒
+
+
+	PHP session设置值/取值
+		$_SESSION['username'] 取值
+		$_SESSION['username'] = 'zhangsan' 设置值
+	PHP 清除session某个属性值:
+		unset($_SESSION['属性名']);
+		//销毁整个session对象
+		session_destroy();
+		
+		
+	PHP创建数组对象
+	$arr = array(
+        array('name' => 'zhangsan','age' => 18),
+        array('name' => 'lisi','age' => 23)
+    );
+	
+	PHP创建对象
+	$obj = (object) [
+        'list' => $list,
+        'totallength' => 10,
+    ];
+	
+	
+		
+	PHP解决跨域:
+		后台新增如下代码
+		<?php
+		header("Access-Control-Allow-Origin: http://localhost:8888");
+		header('Access-Control-Allow-Headers:Authorization');
+		header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+		header("Access-Control-Allow-Credentials: true");
+		header("Access-Control-Allow-Headers: Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With,Authorization");
+
+		前端发送ajax请求新增属性：
+		$.ajax({
+			type: 'get',
+			url: 'http://localhost:80/unsession.php',
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
+			success(res){
+				console.log(res)
+			}
+		})
+		增加crossDomain和xhrFields属性
+
+
+		
+		
+		
+
+数据库
+	
+	增加：
+		INSERT INTO table_name(key,key1,key2) VALUES(value,value1,value2)
+
+	删除：
+		DELETE FROM table_name WHERE condition;
+
+	修改：
+		UPDATE table_name SET field1=newvalue, field2=newvalue WHERE runoob_id=3;
+
+	查询：
+		SELECT * FROM table_name WHERE 参数
+		示例：SELECT * FROM table_name WHERE username='zhangsan' && pwd='12'
+		
+	**高级用法**
+	联合查询：
+	select b.*, u.username from borrowmoney b join user u on b.userid=u.id
+	分页查询：
+	SELECT * FROM table_name LIMIT 5,10; // 检索指定记录，从索引5开始，找到10条数据
+	获取数据条数：
+	SELECT COUNT(*) FROM table_name
