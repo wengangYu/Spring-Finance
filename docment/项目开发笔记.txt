@@ -4,5 +4,10 @@ git status 查看代码状态
 git add .  纳入版本控制
 git commit -m'描述'
 git push https://github.com/wengangYu/Spring-Finance.git/ master
+<<<<<<< HEAD
 git config --global user.email 'yu18081588820@outlook.com'
 git config --global user.name 'gavin'
+=======
+git config --global user.email '1249195686@qq.com'
+git config --global user.name 'ppkon'
+>>>>>>> c397342ac58058d0f1057614f0b64b6c84f2dd9d
