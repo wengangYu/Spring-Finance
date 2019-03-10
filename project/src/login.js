@@ -5,4 +5,5 @@ $(function () {
         $('#fail-str').css("display", "block").css("marginLeft","20px")
 
     }
+    
 })
