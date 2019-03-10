@@ -1,1 +1,101 @@
-<h1>我要借钱</h1>
+<!-- 引入当前页面的css -->
+
+<div class="container loan">
+    <div class="local">
+        当前位置 :
+        <span class="glyphicon glyphicon-home"></span> 首页 > 借款 > 借款流程
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        <!-- 流程 -->
+        <div class="flow">
+            <img src="../assets/imgs/liucheng.jpg" alt="flow">
+        </div>
+        <!-- 产品介绍 Product introduction -->
+        <div class="productIntroduction">
+            <img src="../assets/imgs/product.jpg" alt="">
+        </div>
+        <!-- 个人信息info -->
+        <div class="info">
+            <form>
+                <!-- 一、填写基本信息-->
+                <p class="infotitle">
+                    一、填写基本信息
+                </p>
+                <div class="form-group">
+
+                    <label for="exampleInputEmail1">借款用途</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入借款用途">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">借款金额: </label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入借款金额">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">借款类型: </label>
+                    <select class="form-control">
+                        <option>科信贷</option>
+                        <option>科卡贷</option>
+                        <option>经租贷</option>
+                        <option>微企贷</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">借款期限：</label>
+                    <select class="form-control">
+                        <option>1个月</option>
+                        <option>3个月</option>
+                        <option>6个月</option>
+                        <option>12个月</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">还款方式: </label>
+                    <select class="form-control" disabled>
+                        <option>一次性还款</option>
+                        <!-- <option>3个月</option>
+                            <option>6个月</option>
+                            <option>12个月</option> -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">通讯地址：</label>
+                    <textarea class="form-control" rows="3" placeholder="请输入您的通讯地址"></textarea>
+                </div>
+                <!-- 二、描述借款详情 -->
+                <p class="infotitle">
+                    二、描述借款详情
+                </p>
+                <textarea class="form-control" rows="6" placeholder='请对借款用途，还款能力进行详细说明。例如： 1、获贷资金使用用途及使用计划；2、为单笔借款项目的还款保障信息，如抵押、质押、保证等措施。'></textarea>
+                <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+            </form>
+            <div class="xuzhi">
+                <p class="infotitle lt">三、借款须知</p>
+
+                <p>还款说明：</p>
+                <p>(1)每期账单还款需在还款日当天下午4点之前在会员中心-借款账户里完成充值还款操作；</p>
+                <p>(2)若借款人逾期，将会产生逾期费</p>
+
+                </br>
+                </br>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <p>本人确认以下信息：</br>
+
+                            ①、借款人为自然人的，在本平台的借款余额未超过人民币 20 万元；</br>
+
+                            ②、借款人为法人或其他组织的，在本平台的借款余额未超过人民币100万元；</br>
+
+                            ③、借款人为自然人的，在不同网络借贷信息中介机构平台借款总余额未超过人民币100万元；</br>
+
+                            ④、借款人为法人或其他组织的，在不同网络借贷信息中介机构平台借款总余额未超过人民币 500 万元。</p>
+                    </label>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-default w200">提交</button>
+        </div>
+    </div>
+</div>
+<!-- 引入当前页面的js -->
