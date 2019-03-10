@@ -85,5 +85,3 @@ gulp.task('default', ['less','images'], () => {
                         .pipe(htmlmin({ collapseWhitespace: true }))
                         .pipe(gulp.dest('dist'));
         })
-
-// })
