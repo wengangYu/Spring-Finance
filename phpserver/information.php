@@ -4,11 +4,11 @@ header('Content-Type: text/html;charset=utf-8');
 $conn = mysqli_connect('localhost','root','wo168668','spring',3306) or die('Error');
 
 
-//接受前端过来的数据
-$username = $_POST['username'];
+//获取用户id
+$id = $_SESSION['id'];
 
 // 构造sql 语句
-$sql = "select * from user where username='{$username}'";
+$sql = "select * from user where id='{$id}'";
 
 // 执行sql
 $data = mysqli_query($conn,$sql);

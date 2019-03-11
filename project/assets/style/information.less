@@ -1,0 +1,228 @@
+.local{
+    line-height: 40px;
+    color: #777;
+}
+.information{
+    display: flex;
+    .sideBar{
+    min-width: 220px;
+    height: 782px;
+    margin-right: 20px;
+    background-color: #fff;
+        .sidetitle{
+            height: 100px;
+            background:url(../../dist/imgs/titbg.min.png);
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            font-size: 20px;
+            }
+        ul{
+            // align-items: center;
+            li{
+                line-height: 62px;
+                text-align: center;
+                font-size: 16px;
+                a{
+                    color: #333;
+                }
+                &:hover{
+                    background: #fcf8f5;
+                    color: #ff7319;  
+                }
+            }
+        }
+    } 
+    .main{
+        flex: 1;
+        padding: 30px;
+        background-color: #fff;
+        // 平台简介
+        .platformIntroduction{
+            img{
+                width: 100%;
+                padding: 20px 0 40px 0;
+            }
+            .text{
+                text-indent: 3vh;
+                line-height: 35px;
+                color: #555;
+            }
+        }
+        // 高效团队
+        .team{
+            ul{
+                li{
+                    padding: 30px 0 30px 0;
+                    flex: 1;
+                    display: flex;
+                    border-bottom: 1px solid #ccc;
+                    img{
+                        width: 220px;
+                        height: 280px;
+                        margin-right: 30px;
+                    }
+                    .js{
+                        flex: 1;
+                        p:first-child{
+                        font-size: 18px;
+                        color: #333333;
+                        margin-left: 8px;
+                        font-weight: 600;
+                        span{
+                            margin-left: 2vh;
+                            font-size: 14px;
+                            color: #666666;
+                        }
+                        }
+                        p{
+                            font-size: 14px;
+                            color: #666666;
+                            margin-top: 30px;
+                            line-height: 28px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        // 组织信息
+        .organization{
+            .flexnav{
+                display: flex;
+                justify-content: center;
+                li{
+                    width: 140px;
+                    text-align: center;
+                    margin: 10px;
+                    font-size: 20px;
+                    line-height: 40px;
+                    color: #333;
+                    .a{
+                        color: #333 !important;
+                        font-size: 20px;
+                    }
+                    &:hover{
+                        background: #ff7319;
+                        border-radius: 50px;
+                        border:none;
+                    }
+                    &:hover a{
+                        color: #fff !important;
+                        
+                    }
+                }
+                // 激活类
+                .active{
+                    background: #ff7319;
+                    border-radius: 50px;
+                    a{
+                        color: #fff !important;
+                    }
+                }
+            }
+            // 股东
+            .gudong{
+                color: #666;
+               padding: 40px 40px;
+               .gd{
+                text-align: center;
+                .line{
+                    width: 2px;
+                    height: 80px;
+                    background-color: #333;
+                    margin: 0 auto;
+                }
+                .caret{
+                    margin-top: -18px;
+                    margin-right: 3px;
+                }
+               }
+               .text{
+                   margin-top: 40px;
+                   line-height: 28px;
+                   p{
+                       text-indent: 2vh;
+                   }
+
+               }
+            }
+            //工商信息
+            .gs{
+                margin-top: 50px;
+                table{
+                    // background-color: red;
+                    width: 750px;
+                    // height: 200px;
+                    margin: 20px auto 50px;
+                    border-right: 1px solid #eee;
+                    border-bottom: 1px solid #eee;
+                    td{
+                        width: 40%;
+                        border-left: 1px solid #eee;
+                        border-top: 1px solid #eee;
+                        padding: 10px;
+                        font-size: 14px;
+                        text-align: center;
+                        color: #666;
+                    }
+                }
+            }
+            // 渠道信息
+            .qd{
+                margin-top: 50px;
+                table{
+                    // background-color: red;
+                    width: 750px;
+                    // height: 200px;
+                    margin: 20px auto 50px;
+                    border-right: 1px solid #eee;
+                    border-bottom: 1px solid #eee;
+                    td{
+                        border-left: 1px solid #eee;
+                        border-top: 1px solid #eee;
+                        padding: 10px;
+                        font-size: 14px;
+                        text-align: center;
+                        color: #666;
+                    }
+                    td:nth-of-type(1) {
+                        width: 35%;
+                    }
+                    td:nth-of-type(2) {
+                        width: 65%;
+                    }
+            }
+        }
+
+    }
+        // 信批承诺
+        .promise{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 630px;
+                height: 800px;
+                // margin: 0 auto;
+            }
+
+        }
+}
+
+
+
+// 本页面通用标题
+.infotitle{
+    width: 100%;
+    // height: 40px;
+    line-height: 30px;
+    font-size: 22px !important;
+    color: #333!important;
+    padding-left: 15px;
+    border-left: 6px solid #ff7319;
+    padding-bottom:10px;
+    border-bottom: 1px solid #ccc;
+}
+}

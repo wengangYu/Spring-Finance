@@ -21,22 +21,23 @@ date_default_timezone_set("Asia/Shanghai");
     $num=mysqli_num_rows($data);
     // 判断返回数据条数
     if($num !=0){
+        $userdata = mysqli_fetch_assoc($data);
+        $username = $userdata['username'];
+        $id = $userdata['id'];
         // 成功  跳转到页面区
         // echo 'ok';
         // seesion取值  保存用户名到session对象上
         $_SESSION['username']=$username;
+        $_SESSION['id'] = $id;
         // PHP重定向浏览器页面：
         //跳转页面
         // 设置用户的最后登录时间
         $lastime = date("Y-m-d H:i:s");
-        // 获取到这行用户的数据
-        $row = mysqli_fetch_assoc($data);
-        // 转码
-        $userdata = json_encode($row);
-        echo "$userdata";
-        // mysqli_query($conn,'UPDATE user SET lastlogintime="$lastime" WHERE id=userdata['id'];');
-
-		// header("Location: http://localhost:3000/");  
+    
+        
+        mysqli_query($conn,"UPDATE user SET lastlogintime='{$lastime}' WHERE id='{$id}';");
+        // echo "UPDATE user SET lastlogintime= '{$lastime}' WHERE id='{$id}'";
+		header("Location: http://localhost:3000/");  
     }else{
         // 失败 停留当前页面并刷新
         // echo 'fail'; 
