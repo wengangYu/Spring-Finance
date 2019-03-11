@@ -18,11 +18,12 @@ $(function(){
             case '#myaccount/chongzhi': $('#right-box').load('../moulde/personal/chongzhi.html');break;
             case '#myaccount/renzhen': $('#right-box').load('../moulde/personal/renzhen.html');break;
             case '#myaccount/personal': $('#right-box').load('../moulde/personal/personal.html');break;
-            case '#huankuan': $('#right-box').load('../moulde/personal/huankuan.html');break;
-            case '#guanli': $('#right-box').load('../moulde/personal/guanli.html');break;
-            case '#dengji': $('#right-box').load('../moulde/personal/dengji.html');break;
-            case '#jilu': $('#right-box').load('../moulde/personal/jilu.html');break;
-            case '#shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html');break;
+            case '#myaccount/huankuan': $('#right-box').load('../moulde/personal/huankuan.html');break;
+            case '#myaccount/guanli': $('#right-box').load('../moulde/personal/guanli.html');break;
+            case '#myaccount/dengji': $('#right-box').load('../moulde/personal/dengji.html');break;
+            case '#myaccount/jilu': $('#right-box').load('../moulde/personal/jilu.html');break;
+            case '#myaccount/shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html');break;
+            case '#myaccount/xiugai': $('#right-box').load('../moulde/personal/xiugai.html');break;
             case '#reg':$('#main').load('../moulde/reg.html');break;
             default: $('#main').load('../moulde/index.html'); break;
             // default: $('#right-box').load('../moulde/personal/Account-information.html'); break;

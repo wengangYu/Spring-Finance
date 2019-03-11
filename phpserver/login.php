@@ -9,8 +9,8 @@
     // 密码
     $pwd=$_POST['pwd'];
     // 连接数据库 并修改第四个参数 此参数是自己的数据库名
-    $conn = mysqli_connect('localhost','root','wo168668','spring',3306) or die('Error');
-    $conn = mysqli_connect('localhost','root','wo168668','spring',3306) or die('Error');
+    $conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
+    $conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
     // 测试 用户名zs  密码123
     // $sql="SELECT * FROM user where username='zs' && pwd='123' ";
     $sql="select * from user where username='$username' && pwd='$pwd' ";
