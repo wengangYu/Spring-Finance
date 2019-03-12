@@ -5,8 +5,7 @@ require("./crossdomain.php");
 
 if($_SESSION){
     // 清除用户的seeion
-    unset($_SESSION);
-
+    session_destroy();
     // 重定向到登录页面
     header("Location: http://localhost:3000/login.html");  
 }

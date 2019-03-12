@@ -196,7 +196,7 @@
             }
         }
 
-    }
+        }
         // 信批承诺
         .promise{
             margin-top: 50px;
@@ -208,6 +208,201 @@
                 // margin: 0 auto;
             }
 
+        }
+        //运营信息
+        .operate{
+            .flexnav{
+                display: flex;
+                justify-content: center;
+                li{
+                    width: 140px;
+                    text-align: center;
+                    margin: 10px;
+                    font-size: 20px;
+                    line-height: 40px;
+                    color: #333;
+                    .a{
+                        color: #333 !important;
+                        font-size: 20px;
+                    }
+                    &:hover{
+                        background: #ff7319;
+                        border-radius: 50px;
+                        border:none;
+                    }
+                    &:hover a{
+                        color: #fff !important;
+                        
+                    }
+                }
+                // 激活类
+                .active{
+                    background: #ff7319;
+                    border-radius: 50px;
+                    a{
+                        color: #fff !important;
+                    }
+                }
+            }
+            // 累积数据
+            .tab-content{
+                #jzdate{
+                    margin-top: 20px;
+                }
+                .clear{
+                    clear: both;
+                }
+                .leiji{
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    .boxone{
+                        height: 500px;
+                        background-color: #fff;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #999;
+                        box-shadow: 0 2px 10px #eee, 0 0 1px #eee, 0 0 1px #eee;
+                        .bg{
+                            width: 115px;
+                            height: 40px;
+                            position: relative;
+                            top: 10px;
+                            left: -7px;
+                            font-size: 18px;
+                            color: #fff;
+                            line-height: 34px;
+                            text-align: center;
+                            background: url(../../dist/imgs/shujubg.min.png) no-repeat;
+                        }
+                        .zong{ 
+                            margin-top: -20px;
+                        }
+                        .tits{
+                            color: #ff7319!important;
+                            font-size: 22px;
+                            padding-top: 10px;
+                            padding-bottom: 30px;
+                            border-bottom: 1px solid #eee;
+                        }
+                        ul{
+                            li{
+                                img{
+                                    margin-top: 30px;
+                                    margin-bottom: 10px;
+                                    width: auto;
+                                }
+                                .ff6700{
+                                    margin-top: -10px;
+                                    color: #ff7319;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+
+
+                        }
+
+                    }
+                    .boxtwo{
+                        flex: 1;
+                        margin: 30px 0 30px 0;
+                        text-align: center;
+                        box-shadow: 0 2px 10px #eee, 0 0 1px #eee, 0 0 1px #eee;
+                        .bg{
+                            width: 115px;
+                            height: 40px;
+                            position: relative;
+                            top: 10px;
+                            left: -7px;
+                            font-size: 18px;
+                            color: #fff;
+                            line-height: 34px;
+                            text-align: center;
+                            background: url(../../dist/imgs/shujubg.min.png) no-repeat;
+                        }
+                        .zong{ 
+                            margin-top: -20px;
+                            font-size: 16px;
+                            color: #999;
+                        }
+                        .tits{
+                            color: #ff7319!important;
+                            font-size: 22px;
+                            padding-top: 10px;
+                            padding-bottom: 30px;
+                            border-bottom: 1px solid #eee;
+                        }
+                        ul{
+                            li{
+                                img{
+                                    margin-top: 30px;
+                                    margin-bottom: 10px;
+                                    width: auto;
+                                }
+                                p{
+                                    font-size: 12px;
+                                    color: #999;
+                                }
+                                .strong{
+                                    margin-top: -10px;
+                                    font-size: 20px;
+                                    font-weight: normal;
+                                    color: #666;
+                                }
+                            }
+                        }
+
+
+                    }
+                    // 第三个盒子
+                    .boxthr{
+                        flex: 1;
+                        box-shadow: 0 2px 10px #eee, 0 0 1px #eee, 0 0 1px #eee;
+                        .bg{
+                            width: 115px;
+                            height: 40px;
+                            position: relative;
+                            top: 10px;
+                            left: -7px;
+                            font-size: 18px;
+                            color: #fff;
+                            line-height: 34px;
+                            text-align: center;
+                            background: url(../../dist/imgs/shujubg.min.png) no-repeat;
+                        }
+                        ul{
+                            text-align: center;
+                            color: #999;
+                            font-size: 12px;
+                            li{
+                                margin-top: 25px;
+                                line-height: 18px;
+                                .one{
+                                    color: #E7707E;
+                                }
+                                .two{
+                                    color: #21B8D2;
+                                }
+                                .three{
+                                    color: #84CB3B;
+                                }
+                                .four{
+                                    color: #E5B668;
+                                }
+                                .five{
+                                    color: #E7707E;
+                                }
+                                .six{
+                                    color: #D184DF;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
         }
 }
 
@@ -224,5 +419,4 @@
     border-left: 6px solid #ff7319;
     padding-bottom:10px;
     border-bottom: 1px solid #ccc;
-}
 }
