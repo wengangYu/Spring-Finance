@@ -7,13 +7,19 @@
     $pwd = $_POST['pwd'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
-    $edu = $_POST['education'];
-    
+    $edu = $_POST['education'];   
     $id = $_SESSION['id'];
-    $sql = "UPDATE user SET pwd='$pwd',phone='$phone',email='$email',education='$edu',nickname='$nickname',
-    education='$edu' WHERE id='$id'";
+	$nickname = $_POST['nickname'];
 
     
+    $sql = "UPDATE user SET pwd='$pwd', phone='$phone', email='$email', education='$edu', nickname='$nickname' WHERE id='$id' ";
+
+    $conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
+    $data = mysqli_query($conn,$sql);
     
-    
+    if($data){
+        echo 'ok';
+    }else{
+        echo 'fail';
+    }
 ?>

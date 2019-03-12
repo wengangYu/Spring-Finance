@@ -3,7 +3,7 @@
 // 2.连接数据库,执行查询sql语句
 // 3.判断前端的用户信息和数据库信息是否一致
 // 成功 提示成功   失败  提示失败
-
+date_default_timezone_set("Asia/Shanghai");
     // 用户名
     $username=$_POST['username'];
     // 密码
@@ -21,12 +21,22 @@
     $num=mysqli_num_rows($data);
     // 判断返回数据条数
     if($num !=0){
+        $userdata = mysqli_fetch_assoc($data);
+        $username = $userdata['username'];
+        $id = $userdata['id'];
         // 成功  跳转到页面区
         // echo 'ok';
         // seesion取值  保存用户名到session对象上
         $_SESSION['username']=$username;
+        $_SESSION['id'] = $id;
         // PHP重定向浏览器页面：
-		//跳转页面
+        //跳转页面
+        // 设置用户的最后登录时间
+        $lastime = date("Y-m-d H:i:s");
+    
+        
+        mysqli_query($conn,"UPDATE user SET lastlogintime='{$lastime}' WHERE id='{$id}';");
+        // echo "UPDATE user SET lastlogintime= '{$lastime}' WHERE id='{$id}'";
 		header("Location: http://localhost:3000/");  
     }else{
         // 失败 停留当前页面并刷新
