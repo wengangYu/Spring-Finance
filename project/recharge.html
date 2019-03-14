@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 用户充值样式 -->
+    <link rel="stylesheet" href="./dist/css/recharge.min.css">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/index.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <!-- 顶部条 -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="left col-md-4  col-sm-6 col-xs-6 row">
+                        <div class="col-md-4">
+                            <img src="./assets/imgs/weixin.png" alt="" srcset="">
+                            <span>微信出借</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="glyphicon glyphicon-phone"></span>
+                            <span>app下载</span>
+                        </div>
+                        <div class="col-md-4">
+
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            <span>4000790080</span>
+                        </div>
+                    </div>
+                    <div class="left col-md-4"></div>
+                    <div class="right col-md-4 row col-sm-6 col-xs-6">
+                        <div class="col-md-3 setout">
+                            <!-- <a href="./login.html">注销222</a> -->
+                        </div>
+                        <div class="col-md-3 login">
+                            <a href="./login.html">请登录</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#reg" id="reg">快速注册</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#">帮助中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 导航 -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <img class='navbar-brand' src="./assets/imgs/logonews.png" alt="">
+
+                </div>
+        </nav>
+        </div>
+        <!-- 主体 -->
+        <div class="container">
+            <!-- 标题部分 -->
+            <div class="title-lable">
+                <label>账户充值</label>
+                <p>1. 由于银行系统的限制，充值功能建议使用 IE 内核（IE8及以上）的浏览器。</p>
+                <p>2. 请注意：为打击信用卡套现行为，充值资金必须经过投资回款后方能允许提现。</p>
+            </div>
+            <!-- 充值main -->
+            <div class="recharge-main">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active">
+                        <a href="#">充值</a>
+                    </li>
+                </ul>
+                <form action="#" class="form-bank">
+                    银行卡号<span> *</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="" selected>中国工商银行</option>
+                        <option value="">中国农业银行</option>
+                        <option value="">建设银行</option>
+                        <option value="">招商银行</option>
+                        <option value="">中国银行</option>
+                    </select><span> *</span>
+                    
+                    余额:222
+                    <br>充值金额<span> *</span>
+                    <input type="text" class="account-recharge">
+                    <br> 充值方式<span> *</span>
+                    <span class="icon"></span>
+                    <br>
+                    <button type="button" id="recharge-btn">实时转账</button>
+                    <button type="button" >普通转账</button>
+                    <button type="button" >次日转账</button>
+                </form>
+            </div>
+        </div>
+
+
+        
+        <!-- 尾部 -->
+        <div id="footer">
+            <!-- 合作伙伴 -->
+            <div class="cooperation">
+                <div class="container">
+                    <!-- 标题 -->
+                    <div class="title">
+                        <p class="stitle">
+                            合作伙伴
+                        </p>
+                    </div>
+                    <!-- 合作伙伴列表 -->
+                    <ul class="cplist">
+                        <li>
+                            <img src="./assets/imgs/logo_02.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/imgs/logo_01.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/imgs/logo_11.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/imgs/logo_12.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/imgs/luodian.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/imgs/rongguan.png" alt="">
+                        </li>
+                    </ul>
+                    <!-- 尾部第一部分 -->
+                    <div class="f1 row">
+                        <ul class="l1 col-md-4">
+                            <li>
+
+                                <p>
+                                    <img src="./assets/imgs/icon-1.png" alt="">公司介绍</p>
+                                <span>平台简介</span>
+                                <span>管理团队</span>
+                                <span>企业资质</span>
+
+                            </li>
+                            <li>
+                                <li>
+                                    <p>
+                                        <img src="./assets/imgs/icon-2.png" alt="">帮助中心</p>
+                                    <span>网站公告</span>
+                                    <span>常见问题</span>
+                                    <span>招贤纳士</span>
+
+                                </li>
+                            </li>
+                            <li>
+                                <li>
+                                    <p>
+                                        <img src="./assets/imgs/icon-3.png" alt="">新手指南</p>
+                                    <span>安全保障</span>
+                                    <span>我要出借</span>
+                                    <span>网贷知识</span>
+
+                                </li>
+                            </li>
+                        </ul>
+                        <ul class="c1 col-md-4">
+                            <img src="./assets/imgs/weixin-1.png" alt="">
+                            <img src="./assets/imgs/APP_cords.png" alt="">
+                        </ul>
+                        <div class="r1 col-md-4">
+                            <div>
+                                <p>服务号码:</p>
+                                <p class="num">
+                                    <span>
+                                        <img src="./assets/imgs/phones.png" alt="">
+                                    </span>
+                                    400-079-0080</p>
+                                <p>周一至周五:9:30-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 友情链接 -->
+                    <div class="yq">
+                        <ul>
+                            <li>友情链接 : </li>
+                            <li>网贷之家</li>
+                            <li>网贷天眼</li>
+                            <li>上饶银行</li>
+                            <li>安融征信</li>
+                            <li>e签宝</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 尾部最后yibu部分 -->
+                <div class="end container-fluid">
+                    <div class="endtext">
+                        <span>©2015 春天金融 All Rights Reserved | 深圳前海阳睿互联网金融服务有限公司 粤ICP备16103985号-1</span>
+                        <span>公司地址：深圳市前海深港合作区梦海大道5033号前海卓越金融中心（一期）7号楼2807A</span>
+                        <span>
+                            <a href="#">
+                                <img src="./assets/imgs/dbaq_2.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/imgs/dbaq_3.png" alt="">
+                            </a>
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 引入js jq -->
+        <script src="./lib/jquery.js"></script>
+        <!-- 引入btjs  -->
+        <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- 引入当前页面的js -->
+        <script src="./src/index.js"></script>
+        <!-- 引入充值js -->
+        <script src="./src/recharge.js"></script>
+</body>
+
+</html>
