@@ -1,104 +1,125 @@
-*{
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: rgb(244, 244, 244) !important;
-    
+
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
-    text-decoration: none!important;
+
+a {
+    text-decoration: none !important;
 }
-#header{
-    .topbar{
+
+#header {
+    .topbar {
         width: 100%;
-        .container{ 
+
+        .container {
             line-height: 35px;
             font-size: 12px;
             // text-align: center;
             font-family: "微软雅黑";
             color: #999999;
-            a{
-                text-decoration:none;
+
+            a {
+                text-decoration: none;
                 color: #999999;
-                &:hover{
+
+                &:hover {
                     color: #FF7319;
                 }
             }
-            .right{
+
+            .right {
                 text-align: center;
             }
         }
     }
-    .navbar{
+
+    .navbar {
         margin: 0;
         border-radius: 0 !important;
-        
+
     }
-    .navbar-default{
-        .navbar-brand{
+
+    .navbar-default {
+        .navbar-brand {
             width: 100%;
             height: 100%;
         }
-        .navbar-nav{
-            li{
-                a{
+
+        .navbar-nav {
+            li {
+                a {
                     // height: 60px;
-                line-height: 60px;
-                font-size: 18px;
-                color: #333;
-                &:hover{
-                    color: #FF7319;
-                }
+                    line-height: 60px;
+                    font-size: 18px;
+                    color: #333;
+
+                    &:hover {
+                        color: #FF7319;
                     }
                 }
             }
         }
+    }
 
 }
+
 // 轮播
-#main{
+#main {
+
     // 全背景
-    .main1{
+    .main1 {
         background-color: #fff;
     }
+
     // 绝对定位
-    .carousel-inner{
+    .carousel-inner {
         position: relative;
-        .item{
+
+        .item {
             width: 100%;
             height: 350px;
-            img{
+
+            img {
                 width: 100%;
                 height: 100% !important;
-                
+
             }
         }
-        .reglogin{
+
+        .reglogin {
             position: absolute;
-            top:0;
+            top: 0;
             right: 0;
             width: 280px;
             height: 300px;
             border-radius: 7px;
             margin: 2% 8% 2%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             color: #fff;
             font-size: 15px;
             padding: 20px;
-            p{
+
+            p {
                 margin-top: 20px;
             }
-            b{
+
+            b {
                 font-size: 40px;
                 color: #FF7319;
 
             }
-            .btn{
+
+            .btn {
                 background-color: #ff7000;
                 border: none;
                 margin-bottom: 20px;
@@ -106,92 +127,112 @@ a{
                 width: 100%;
                 height: 40px;
             }
-            p:last-child{
+
+            p:last-child {
                 color: #ff7000;
-                span{
+
+                span {
                     color: #fff
                 }
             }
         }
-    
-    
+
+
     }
+
     // 轮播下面的4个格子
-    .box{
-        ul{
-            padding-top:20px;
-            padding-bottom: 20px;  
+    .box {
+        ul {
+            padding-top: 20px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #eee;
-            margin-bottom: 0;   
-            li{
+            margin-bottom: 0;
+
+            li {
                 margin: 0 auto;
                 color: #777;
                 font-size: 12px;
-                .title{
+
+                .title {
                     font-size: 16px;
                     color: #222;
                 }
             }
         }
-        .text{
+
+        .text {
             height: 50px;
-            .box1{
+
+            .box1 {
                 margin-top: 5px;
                 height: 40px;
                 line-height: 40px;
                 text-align: center;
                 border-right: 1px solid #eee;
-                p{
-                   span{
-                    color: #ff7319;
-                    font-size: 20px;
-                   } 
+
+                p {
+                    span {
+                        color: #ff7319;
+                        font-size: 20px;
+                    }
                 }
             }
-            .box1:last-child{
+
+            .box1:last-child {
                 border-right: none;
             }
         }
     }
+
     // 新人必备
-    .novice{
+    .novice {
         margin-top: 30px;
         margin-bottom: 30px;
         background-color: #fff;
         display: flex;
-        a{
+
+        a {
             flex: 1;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
-        .rcontent{
+
+        .rcontent {
             flex: 3;
             padding: 20px;
-            .bade{
+
+            .bade {
                 font-size: 24px;
                 margin: 0;
                 padding-bottom: 15px;
                 color: #333333;
                 border-bottom: 1px solid #ccc;
-                span{
+
+                span {
                     font-size: 16px;
                     color: #999;
                     margin-left: 15px;
                 }
             }
-            .content{
+
+            .content {
                 display: flex;
-                .leftbox{
+
+                .leftbox {
                     flex: 2;
-                    .newbox{
+
+                    .newbox {
                         margin-top: 20px;
-                        .tyb{
+
+                        .tyb {
                             font-size: 18px;
                             color: #666;
                             margin-left: 2px;
-                            .xin{
+
+                            .xin {
                                 background: #b184df;
                                 padding: 2px 5px;
                                 border-radius: 2px;
@@ -200,9 +241,10 @@ a{
                                 margin-right: 10px;
                                 position: relative;
                                 top: -1px;
-                                
+
                             }
-                            .sanone{
+
+                            .sanone {
                                 border-color: transparent #ff7139 transparent transparent;
                                 border-style: solid;
                                 border-width: 5px;
@@ -210,7 +252,8 @@ a{
                                 margin-left: 5px;
                                 margin-right: -4px;
                             }
-                            .santwo{
+
+                            .santwo {
                                 border-color: transparent #fef6f3 transparent transparent;
                                 border-style: solid;
                                 border-width: 5px;
@@ -219,7 +262,8 @@ a{
                                 left: -9px;
                                 z-index: 10;
                             }
-                            .samll{
+
+                            .samll {
                                 font-size: 12px;
                                 color: #ff7139;
                                 font-weight: normal;
@@ -231,10 +275,12 @@ a{
                                 left: -16px;
                             }
                         }
-                        .newcont{
+
+                        .newcont {
                             display: flex;
                             padding: 5px;
-                            li:last-child{
+
+                            li:last-child {
                                 margin-top: 10px;
                                 background-color: #ccc;
                                 color: #fff;
@@ -243,33 +289,38 @@ a{
                                 border: none;
                                 height: 42px;
                             }
-                            li{
+
+                            li {
                                 flex: 1;
-                                .bf{
+
+                                .bf {
                                     color: #ff7000;
                                     font-size: 36px;
                                     line-height: 36px
                                 }
-                                .mr{
+
+                                .mr {
                                     font-size: 18px;
                                     line-height: 36px
                                 }
-                            
-                                p{
+
+                                p {
                                     line-height: 30px;
                                     font-size: 12px;
                                     color: #999;
                                 }
                             }
-                            
+
                         }
                     }
-                    
+
                 }
-                .rbox{
+
+                .rbox {
                     margin-top: 20px;
                     flex: 1;
-                    img{
+
+                    img {
                         width: 100%;
                         height: 100%;
                     }
@@ -280,46 +331,54 @@ a{
     }
 
     // 定期项目
-    .dingqi{
+    .dingqi {
         // background-color: #fff;
         display: flex;
-        .dqleft{
+
+        .dqleft {
             padding: 20px;
             flex: 3;
             background-color: #fff;
-            .title{
+
+            .title {
                 font-size: 24px;
                 color: #333;
                 line-height: 30px;
                 border-bottom: 1px solid #ccc;
-                span{
+
+                span {
                     font-size: 16px;
                     color: #999;
                 }
             }
-            ul{
+
+            ul {
                 // display: flex;
                 // flex-direction: column;
                 // li{
                 //     flex: 1;
                 // }
             }
-            .dqbox{
+
+            .dqbox {
                 margin-top: 20px;
                 border-bottom: 1px solid #ccc;
-                &:hover{
+
+                &:hover {
                     box-shadow: 8px 10px 10px #ccc;
                     border-radius: 5px;
                     transition: all 0.3s;
                     // background-color: rgba(146, 23, 173, 0.1);
                     color: black;
-                    
+
                 }
-                .tyb{
+
+                .tyb {
                     font-size: 18px;
                     color: #666;
                     margin-left: 2px;
-                    .xin{
+
+                    .xin {
                         background: #b184df;
                         padding: 2px 5px;
                         border-radius: 2px;
@@ -328,9 +387,10 @@ a{
                         margin-right: 10px;
                         position: relative;
                         top: -1px;
-                        
+
                     }
-                    .sanone{
+
+                    .sanone {
                         border-color: transparent #ff7139 transparent transparent;
                         border-style: solid;
                         border-width: 5px;
@@ -338,7 +398,8 @@ a{
                         margin-left: 5px;
                         margin-right: -4px;
                     }
-                    .santwo{
+
+                    .santwo {
                         border-color: transparent #fef6f3 transparent transparent;
                         border-style: solid;
                         border-width: 5px;
@@ -347,7 +408,8 @@ a{
                         left: -9px;
                         z-index: 10;
                     }
-                    .samll{
+
+                    .samll {
                         font-size: 12px;
                         color: #ff7139;
                         font-weight: normal;
@@ -359,10 +421,12 @@ a{
                         left: -16px;
                     }
                 }
-                .newcont{
+
+                .newcont {
                     display: flex;
                     padding: 5px;
-                    li:last-child{
+
+                    li:last-child {
                         margin-top: 10px;
                         background-color: #ccc;
                         color: #fff;
@@ -371,177 +435,230 @@ a{
                         border: none;
                         height: 42px;
                     }
-                    li{
+
+                    li {
                         flex: 1;
-                        .bf{
+
+                        .bf {
                             color: #ff7000;
                             font-size: 36px;
                             line-height: 36px
                         }
-                        .mr{
+
+                        .mr {
                             font-size: 18px;
                             line-height: 36px
                         }
-                    
-                        p{
+
+                        p {
                             line-height: 30px;
                             font-size: 12px;
                             color: #999;
                         }
                     }
-                    
+
                 }
             }
         }
-        .dqright{
+
+        .dqright {
             flex: 1;
             margin-left: 20px;
             display: flex;
             flex-direction: column;
-            .dq1{
+
+            .dq1 {
                 flex: 1;
                 background-color: #fff;
-                img{
+
+                img {
                     width: 100%;
                     // height: 100%;
                 }
-                .textcont{
-                    color:#888;
+
+                .textcont {
+                    color: #888;
                     font-size: 14px;
                     padding: 10px;
-                    .li{
-                        
+
+                    .li {
+
                         line-height: 14px;
                     }
                 }
-                &:nth-child(2){
-                    margin:20px 0 20px 0;
+
+                &:nth-child(2) {
+                    margin: 20px 0 20px 0;
                 }
-                
+
             }
         }
     }
 }
+
 // 公共样式 标题
-.title{
+.title {
     height: 40px;
     line-height: 40px;
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
-    
-    .stitle{
+
+    .stitle {
         margin-left: 5px;
         color: #333;
         font-size: 18px;
         border-bottom: 2px solid #ff6700;
         margin-bottom: -1px;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: #999
     }
 }
+
 // 尾部
-#footer{
+#footer {
     margin-top: 30px;
     width: 100%;
     height: 100%;
     background-color: #fff;
+
     // 合作伙伴
-    .cooperation{
-        p{
+    .cooperation {
+        p {
             font-size: 17px;
             line-height: 40px;
             margin-right: 20px;
-            color: #444; 
-            
+            color: #444;
+
         }
-        .cplist{    
+
+        .cplist {
             margin-top: 20px;
             margin-bottom: 60px;
             display: flex;
             justify-content: space-around;
-            img{
+
+            img {
                 width: 100%;
             }
         }
+
         // 尾部第一部分
-        .f1{
-            
-            .l1{
-                
+        .f1 {
+
+            .l1 {
+
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-                li{
-                    p{
+
+                li {
+                    p {
                         margin-bottom: 0;
                         line-height: 30px;
                     }
+
                     display: flex;
                     flex-direction: column;
-                    span{
+
+                    span {
                         text-align: center;
                         color: #666;
-                        font-size:14px;
+                        font-size: 14px;
                         line-height: 30px;
                     }
                 }
             }
-            .c1{
+
+            .c1 {
                 display: flex;
                 justify-content: space-around;
                 border-left: 1px solid #ccc;
                 border-right: 1px solid #ccc;
             }
-            .r1{
+
+            .r1 {
                 display: flex;
                 justify-content: space-around;
-               p{   
-                font-size: 16px;
-                color: #666;
-                //    text-align: center;
-                   line-height: 30px;
-               }
-               .num{
-                font-size: 30px;
-                color: #333;
-               }
+
+                p {
+                    font-size: 16px;
+                    color: #666;
+                    //    text-align: center;
+                    line-height: 30px;
+                }
+
+                .num {
+                    font-size: 30px;
+                    color: #333;
+                }
             }
         }
-        .yq{
+
+        .yq {
             margin-top: 30px;
-            ul{
+
+            ul {
                 display: flex;
-                li{
+
+                li {
                     margin-right: 20px;
                     color: #666;
-                    font-size:14px;
+                    font-size: 14px;
                     line-height: 30px;
                 }
             }
         }
+
         // 最后的页脚
-        .end{
+        .end {
             height: 100%;
             background-color: #666666;
-           .endtext{
-               margin-top: 20px;
-               display: flex;
+
+            .endtext {
+                margin-top: 20px;
+                display: flex;
                 flex-direction: column;
-            //    justify-content: center;
-               align-items: center;
-               span{
-                   font-size: 16px;
-                   color: #fff;
-                   line-height: 30px;
-               }
-               span:last-child{
-                   margin-bottom: 30px;
-               }
-           }
+                //    justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 16px;
+                    color: #fff;
+                    line-height: 30px;
+                }
+
+                span:last-child {
+                    margin-bottom: 30px;
+                }
+            }
         }
-        
+
     }
+}
+
+#borrow_table {
+    margin-bottom: 30px;
+    .lend {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+
+        .ptitle {
+            font-size: 22px;
+            color: #333333;
+            padding-left: 35px;
+            background: url(../../dist/imgs/icon-liebiao.min.png) no-repeat;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+
+        }
+    }
+    .btn{
+        padding: 0px 6px;
+    }
+
 }
