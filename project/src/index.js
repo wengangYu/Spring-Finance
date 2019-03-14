@@ -4,12 +4,12 @@ $(function () {
 
     // //初始化加载模块
     hashFuc();
-    projectlist();
     var mydate = new Date();
     mydate = mydate.getHours();
     var hl = hello(mydate);
     getSession(hl);
-    $('.setout').on('click', setout);
+    $('.setout').on('click',setout);
+    getborrowlist()
 })
 // 获取当前用户的session数据
 function getSession(hl) {
@@ -133,10 +133,6 @@ function hashFuc() {
     }
 }
 
-// 主页项目列表渲染函数
-function projectlist() {
-    ajax(1);
-}
 
 
 function ajax(page){
@@ -194,4 +190,40 @@ function ajax(page){
 
 
     })
+}
+function getborrowlist() {  
+    $.ajax({
+        type: 'get',
+        url: 'http://localhost:80/getborrowlist.php',
+        xhrFields: {
+            withCredentials: true    //是否允许携带cookie
+        },
+        crossDomain: true,      //是否跨域请求
+        success: function (res) {
+           let list  = JSON.parse(res)
+           refirshTable(list)
+           
+        }
+    })
+}
+
+function refirshTable(list){
+    console.log(list);
+    
+    var str = ``
+    for(var obj of list){
+        str +=`<tr>
+                    <td>${obj.nickname}</td>
+                    <td id="l_purpose">${obj.l_purpose}</td>
+                    <td id="Interest">${obj.Interest}.00%</td>
+                    <td id="l_sum">${obj.l_sum}</td>
+                    <td id="l_repayment_method">${obj.l_repayment_method}</td>
+                    <td id="investmoney">${((obj.investmoney / obj.l_sum) * 100).toFixed(2)}%</td>
+                    <td id="l_btn"><button type="button" class="btn btn-danger">查看详情</button>
+                    </td>
+                </tr>`
+    }
+
+    $('#borrow_list_table').html(str)
+    
 }

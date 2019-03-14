@@ -1,8 +1,7 @@
 <?php
 header('Content-Type: text/html;charset=utf-8');
 // 引入跨域
-require("./crossdomain.php");
-
+require("./connect.php");
 if($_SESSION){
     // 清除用户的seeion
     session_destroy();
