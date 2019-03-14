@@ -88,7 +88,7 @@
                 </ul>
                 <form action="#" class="form-bank">
                     银行卡号<span> *</span>
-                    <input type="text" class="account-recharge">
+                    <input type="text">
                     <select name="" id="">
                         <option value="" selected>中国工商银行</option>
                         <option value="">中国农业银行</option>
@@ -103,12 +103,15 @@
                     <br> 充值方式<span> *</span>
                     <span class="icon"></span>
                     <br>
-                    <button type="button">实时转账</button>
-                    <button type="button">普通转账</button>
-                    <button type="button">次日转账</button>
+                    <button type="button" id="recharge-btn">实时转账</button>
+                    <button type="button" >普通转账</button>
+                    <button type="button" >次日转账</button>
                 </form>
             </div>
         </div>
+
+
+        
         <!-- 尾部 -->
         <div id="footer">
             <!-- 合作伙伴 -->
@@ -226,6 +229,8 @@
         <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- 引入当前页面的js -->
         <script src="./src/index.js"></script>
+        <!-- 引入充值js -->
+        <script src="./src/recharge.js"></script>
 </body>
 
 </html>
