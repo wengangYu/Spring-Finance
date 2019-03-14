@@ -1,5 +1,5 @@
 <?php
-require("./crossdomain.php");//引入跨域文件
+require("./connect.php");//引入跨域文件
 header('Content-Type: text/html;charset=utf-8');
 
 
@@ -10,7 +10,6 @@ $id = $_SESSION['id'];
 $sql = "select * from user where id='{$id}'";
 
 // 执行sql
-$conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
 $data = mysqli_query($conn,$sql);
 
 //获取一条数据

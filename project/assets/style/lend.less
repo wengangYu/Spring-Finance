@@ -13,7 +13,7 @@
         // justify-content: space-between;
         .listboxone,.listboxtwo,.listboxthree{
             flex: 1;
-            
+        
         }
         .typename{
             font-size: 18px;
@@ -69,8 +69,12 @@
                 padding: 10px;
                 border-bottom: 1px solid #ccc;
                 &:hover{
-                    background-color: #fef6f3;
-                    transition: all 1s;
+                    box-shadow: 8px 10px 10px #ccc;
+                    border-radius: 5px;
+                    transition: all 0.3s;
+                    // background-color: rgba(146, 23, 173, 0.1);
+                    color: black;
+                    
                 }
                 .tyb{
                     font-size: 18px;
@@ -103,6 +107,7 @@
                         position: relative;
                         left: -9px;
                         z-index: 10;
+                
                     }
                     .samll{
                         font-size: 12px;
@@ -120,21 +125,15 @@
                     display: flex;
                     padding: 5px;
                     
-                    .mybtn{
+                    .btn-success{
                         // margin: 50px;
+                        height: 90%;
+                        width: 60%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        .btnn{
-                            width: 60%;
-                            height: 50%;
-                            // background-color: pink;
-                            border-radius: 5px;
-                            text-align: center;
-                            line-height: 38px;
-                            background-color: #cccccc;
-                        }
                          }
+                    
                     li{
                         flex: 1;
                         .bf{
@@ -157,12 +156,7 @@
                 }
             }
         }
-        // 分页
-        .page{
-            display: flex;
-            justify-content: center !important;
-            
-        }
+
         
     }
 }

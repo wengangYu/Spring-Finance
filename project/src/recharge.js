@@ -20,6 +20,7 @@ function recharge(){
                 // alert('充值成功!')
                 location.href='http://localhost:3000/index.html#myaccount'
             }
+            alert('充值失败')
         }
     })
 }
