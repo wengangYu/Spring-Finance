@@ -19,9 +19,9 @@
             <div class="reglogin">
                 <p>借款约定年化利率 </p>
                 <b>8%-13.5%</b>
-                <button type="button" class="btn btn-danger">注册领取2018元红包</button>
+                <button type="button" class="btn btn-danger"><a href="http://localhost:3000/#reg">注册领取2018元红包</a></button>
                 <p>
-                    <span>已有账号?</span>马上登录</p>
+                    <span>已有账号?</span><a href="http://localhost:3000/login.html">马上登录</a></p>
             </div>
         </div>
 
@@ -182,11 +182,12 @@
                 </tr>
             </thead>
             <tbody id="borrow_list_table">
-                
+
             </tbody>
         </table>
     </div>
 </div>
+<div id="echarts" class="container" style="width: 800px;height:400px;background: #fff;margin-bottom: 30px;"></div>
 <!-- 定期项目 -->
 <div class="container">
     <div class="dingqi">
@@ -198,23 +199,23 @@
             </p>
             <!-- 内容 列表-->
             <ul>
-               
+
             </ul>
             <div class="page">
                 <ul class="pagebox">
                     <li class="size">
-                       
+
                         <select class="form-control">
-                                <option value="-1" >请选择每页显示条数</option>
-                                <option value="3" selected="selected">3</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                            </select>
+                            <option value="-1">请选择每页显示条数</option>
+                            <option value="3" selected="selected">3</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                        </select>
                     </li>
                     <li class="btn btn-primary befor">上一页</li>
                     <li>
-                        <ul class="pages">    
+                        <ul class="pages">
                         </ul>
                     </li>
                     <li class="btn btn-primary affter">下一页</li>
@@ -269,7 +270,7 @@
             </div>
         </div>
 
-        
+
     </div>
 </div>
 <!-- 分页 -->
@@ -277,3 +278,4 @@
 <script src="../src/page.js"></script>
 <script src="../src/project.js"></script>
 <script src="../lib/echarts.min.js"></script>
+<script src="../src/echarts.js/zhu.js"></script>

@@ -100,11 +100,11 @@ function hashFuc() {
         case '#information': $('#main').load('../moulde/information.html'); break;
         case '#security': $('#main').load('../moulde/security.html'); break;
         case '#myaccount': $('#main').load('../moulde/myaccount.html'); break;
-        case '#huankuan': $('#right-box').load('../moulde/personal/huankuan.html'); break;
-        case '#guanli': $('#right-box').load('../moulde/personal/guanli.html'); break;
-        case '#dengji': $('#right-box').load('../moulde/personal/dengji.html'); break;
-        case '#jilu': $('#right-box').load('../moulde/personal/jilu.html'); break;
-        case '#shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html'); break;
+        case '#myaccount/huankuan': $('#right-box').load('../moulde/personal/huankuan.html'); break;
+        case '#myaccount/guanli': $('#right-box').load('../moulde/personal/guanli.html'); break;
+        case '#myaccount/dengji': $('#right-box').load('../moulde/personal/dengji.html'); break;
+        case '#myaccount/jilu': $('#right-box').load('../moulde/personal/jilu.html'); break;
+        case '#myaccount/shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html'); break;
         case '#reg': $('#main').load('../moulde/reg.html'); break;
         // 我的账户单页面
         case '#myaccount/Account-information': $('#right-box').load('../moulde/personal/Account-information.html'); break;
@@ -113,6 +113,7 @@ function hashFuc() {
         case '#myaccount/chongzhi': $('#right-box').load('../moulde/personal/chongzhi.html'); break;
         case '#myaccount/renzhen': $('#right-box').load('../moulde/personal/renzhen.html'); break;
         case '#myaccount/personal': $('#right-box').load('../moulde/personal/personal.html'); break;
+        case '#myaccount/xiugai': $('#right-box').load('../moulde/personal/xiugai.html'); break;
         // 信息披露
         case '#information/platformIntroduction': $('.main').load('../moulde/information/platformIntroduction.html'); break;
         case '#information/team': $('.main').load('../moulde/information/team.html'); break;

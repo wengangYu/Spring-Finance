@@ -19,8 +19,11 @@ function recharge(){
                 //重新刷新用户数据，显示充值完毕的金额!
                 // alert('充值成功!')
                 location.href='http://localhost:3000/index.html#myaccount'
+                alert('充值成功')
+            }else{
+                alert('充值失败')
             }
-            alert('充值失败')
+            
         }
     })
 }
