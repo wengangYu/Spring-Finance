@@ -53,6 +53,7 @@ $(function () {
     var hl = hello(mydate);
     getSession(hl);
     $('.setout').on('click', setout);
+    getborrowlist()
 })
 // 获取当前用户的session数据
 function getSession(hl) {
@@ -146,4 +147,118 @@ function hello(localdate) {
         hello = '凌晨好！'
     }
     return hello;
+}
+
+//哈希地址模块
+function hashFuc() {
+    switch (location.hash) {
+        // 首页
+        case '#index': $('#main').load('../moulde/index.html'); break;
+        case '#loan': $('#main').load('../moulde/loan.html'); break;
+        case '#lend': $('#main').load('../moulde/lend.html'); break;
+        case '#information': $('#main').load('../moulde/information.html'); break;
+        case '#security': $('#main').load('../moulde/security.html'); break;
+        case '#myaccount': $('#main').load('../moulde/myaccount.html'); break;
+        case '#huankuan': $('#right-box').load('../moulde/personal/huankuan.html'); break;
+        case '#guanli': $('#right-box').load('../moulde/personal/guanli.html'); break;
+        case '#dengji': $('#right-box').load('../moulde/personal/dengji.html'); break;
+        case '#jilu': $('#right-box').load('../moulde/personal/jilu.html'); break;
+        case '#shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html'); break;
+        case '#reg': $('#main').load('../moulde/reg.html'); break;
+        // 我的账户单页面
+        case '#myaccount/Account-information': $('#right-box').load('../moulde/personal/Account-information.html'); break;
+        case '#myaccount/jiekuan': $('#right-box').load('../moulde/personal/jiekuan.html'); break;
+        case '#myaccount/liushui': $('#right-box').load('../moulde/personal/liushui.html'); break;
+        case '#myaccount/chongzhi': $('#right-box').load('../moulde/personal/chongzhi.html'); break;
+        case '#myaccount/renzhen': $('#right-box').load('../moulde/personal/renzhen.html'); break;
+        case '#myaccount/personal': $('#right-box').load('../moulde/personal/personal.html'); break;
+        // 信息披露
+        case '#information/platformIntroduction': $('.main').load('../moulde/information/platformIntroduction.html'); break;
+        case '#information/team': $('.main').load('../moulde/information/team.html'); break;
+        case '#information/organization': $('.main').load('../moulde/information/organization.html'); break;
+        case '#information/operate': $('.main').load('../moulde/information/operate.html'); break;
+        case '#information/riskManagement': $('.main').load('../moulde/information/riskManagement.html'); break;
+        case '#information/riskeducation': $('.main').load('../moulde/information/riskeducation.html'); break;
+        case '#information/culture': $('.main').load('../moulde/information/culture.html'); break;
+        case '#information/dynamic': $('.main').load('../moulde/information/dynamic.html'); break;
+        case '#information/cooperativePartner': $('.main').load('../moulde/information/cooperativePartner.html'); break;
+        case '#information/contactUs': $('.main').load('../moulde/information/contactUs.html'); break;
+        case '#information/promise': $('.main').load('../moulde/information/promise.html'); break;
+
+        // 这个默认是首页，终极boos 哦
+        default: $('#main').load('../moulde/index.html'); break;
+        // default: $('#right-box').load('../moulde/personal/Account-information.html'); break;
+
+    }
+}
+
+
+
+function ajax(page) {
+    var data = { currentpage: page, pagesize: 3 }
+    var success = function (res) {
+        var str = '';
+        var rs = JSON.parse(res);
+        for (const i of rs) {
+            str += `<li class="dqbox">
+            <p class="tyb">
+                <span class="xin">新</span>${i['type']}${i['number']}
+
+            </p>
+            <ul class="newcont">
+                <li>
+                    <span class="bf">${i['annual_interest_rate']}</span>
+                    <span>%</span>
+                    <p class="shouyis">借款约定年化利率</p>
+                </li>
+                <li>
+                    <span class="mr">${i['term']}</span>
+                    <span>个月</span>
+                    <p class="shouyis">项目期限</p>
+                </li>
+                <li>
+                    <span class="mr">${i['money']}</span>
+                    <span>元</span>
+                    <p class="shouyis">项目金额</p>
+                </li>
+                <li>
+                    <span class="mr">${i['repayment_method']}</span>
+                    <p class="shouyis">还款方式</p>
+                </li>
+                <li class=" btn btn-success">
+                ${i['state']}
+                </li>
+            </ul>
+          </li>`;
+            $('.dqleft>ul').html(str);
+        }
+    }
+    apipost('/pages.php', success)
+}
+function getborrowlist() {
+    apiget('/getborrowlist.php',success)
+       var success=function (res) {
+            let list = JSON.parse(res)
+            refirshTable(list)
+        }
+}
+function refirshTable(list) {
+    console.log(list);
+
+    var str = ``
+    for (var obj of list) {
+        str += `<tr>
+                    <td>${obj.nickname}</td>
+                    <td id="l_purpose">${obj.l_purpose}</td>
+                    <td id="Interest">${obj.Interest}.00%</td>
+                    <td id="l_sum">${obj.l_sum}</td>
+                    <td id="l_repayment_method">${obj.l_repayment_method}</td>
+                    <td id="investmoney">${((obj.investmoney / obj.l_sum) * 100).toFixed(2)}%</td>
+                    <td id="l_btn"><button type="button" class="btn btn-danger">查看详情</button>
+                    </td>
+                </tr>`
+    }
+
+    $('#borrow_list_table').html(str)
+
 }

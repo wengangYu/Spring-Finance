@@ -1,5 +1,5 @@
 <?php
-require('./crossdomain.php'); //跨域
+require('./connect.php'); //跨域
 // 1.接收前端发送的充值金额
 // 2.构造sql语句并执行
 // 3.进行充值并返回到页面
@@ -8,8 +8,6 @@ require('./crossdomain.php'); //跨域
 // 接收数据库的id
 $id = $_SESSION['id'];
 $money=$_POST['money'];//本次存的钱
-
-$conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
 
 
 // 1. 先获取用户的总金额(totalmoney:总金额， blockedmoney:冻结金额)
@@ -25,7 +23,6 @@ $newmoney=$row["totalmoney"]+$money;
 // 新的总金额
 $newusablemoney = $newmoney - $row["blockedmoney"];
 $sql2="UPDATE user SET totalmoney='$newmoney',usablemoney='$newusablemoney'  WHERE id='$id'";
-$conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
 $updatadata=mysqli_query($conn,$sql2);
 // 判断存款成功与否
 if($updatadata){

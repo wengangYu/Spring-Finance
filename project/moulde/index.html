@@ -161,9 +161,30 @@
                 <div class="rbox">
                     <img src="./assets/imgs/saomao.jpg" alt="">
                 </div>
-                
+
             </div>
         </div>
+    </div>
+</div>
+<div id="borrow_table">
+    <div class="container lend">
+        <div class="ptitle">个人项目列表</div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>借款人</th>
+                    <th>借款标题</th>
+                    <th>年利率</th>
+                    <th>金额</th>
+                    <th>还款方式</th>
+                    <th>进度</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="borrow_list_table">
+                
+            </tbody>
+        </table>
     </div>
 </div>
 <!-- 定期项目 -->
@@ -177,129 +198,29 @@
             </p>
             <!-- 内容 列表-->
             <ul>
-                <!-- 第一个列表 -->
-                <li class="dqbox">
-                    <p class="tyb">
-                        <span class="xin">新</span>车融宝1820071502
-
-                    </p>
-                    <ul class="newcont">
-                        <li>
-                            <span class="bf">13.2</span>
-                            <span>%</span>
-                            <p class="shouyis">借款约定年化利率</p>
-                        </li>
-                        <li>
-                            <span class="mr">15</span>
-                            <span>个月</span>
-                            <p class="shouyis">项目期限</p>
-                        </li>
-                        <li>
-                            <span class="mr">200,000.00</span>
-                            <span>元</span>
-                            <p class="shouyis">项目金额</p>
-                        </li>
-                        <li>
-                            <span class="mr">先息后本</span>
-                            <p class="shouyis">还款方式</p>
-                        </li>
-                        <li class=" btn btn-success">
-                            还款中
-                        </li>
-                    </ul>
-                </li>
-                <li class="dqbox">
-                    <p class="tyb">
-                        <span class="xin">新</span>车融宝1820071502
-
-                    </p>
-                    <ul class="newcont">
-                        <li>
-                            <span class="bf">13.2</span>
-                            <span>%</span>
-                            <p class="shouyis">借款约定年化利率</p>
-                        </li>
-                        <li>
-                            <span class="mr">15</span>
-                            <span>个月</span>
-                            <p class="shouyis">项目期限</p>
-                        </li>
-                        <li>
-                            <span class="mr">200,000.00</span>
-                            <span>元</span>
-                            <p class="shouyis">项目金额</p>
-                        </li>
-                        <li>
-                            <span class="mr">先息后本</span>
-                            <p class="shouyis">还款方式</p>
-                        </li>
-                        <li class=" btn btn-success">
-                            还款中
-                        </li>
-                    </ul>
-                </li>
-                <li class="dqbox">
-                    <p class="tyb">
-                        <span class="xin">新</span>车融宝1820071502
-
-                    </p>
-                    <ul class="newcont">
-                        <li>
-                            <span class="bf">13.2</span>
-                            <span>%</span>
-                            <p class="shouyis">借款约定年化利率</p>
-                        </li>
-                        <li>
-                            <span class="mr">15</span>
-                            <span>个月</span>
-                            <p class="shouyis">项目期限</p>
-                        </li>
-                        <li>
-                            <span class="mr">200,000.00</span>
-                            <span>元</span>
-                            <p class="shouyis">项目金额</p>
-                        </li>
-                        <li>
-                            <span class="mr">先息后本</span>
-                            <p class="shouyis">还款方式</p>
-                        </li>
-                        <li class=" btn btn-success">
-                            还款中
-                        </li>
-                    </ul>
-                </li>
-                <li class="dqbox">
-                    <p class="tyb">
-                        <span class="xin">新</span>车融宝1820071502
-
-                    </p>
-                    <ul class="newcont">
-                        <li>
-                            <span class="bf">13.2</span>
-                            <span>%</span>
-                            <p class="shouyis">借款约定年化利率</p>
-                        </li>
-                        <li>
-                            <span class="mr">15</span>
-                            <span>个月</span>
-                            <p class="shouyis">项目期限</p>
-                        </li>
-                        <li>
-                            <span class="mr">200,000.00</span>
-                            <span>元</span>
-                            <p class="shouyis">项目金额</p>
-                        </li>
-                        <li>
-                            <span class="mr">先息后本</span>
-                            <p class="shouyis">还款方式</p>
-                        </li>
-                        <li class=" btn btn-success">
-                            还款中
-                        </li>
-                    </ul>
-                </li>
+               
             </ul>
-
+            <div class="page">
+                <ul class="pagebox">
+                    <li class="size">
+                       
+                        <select class="form-control">
+                                <option value="-1" >请选择每页显示条数</option>
+                                <option value="3" selected="selected">3</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                    </li>
+                    <li class="btn btn-primary befor">上一页</li>
+                    <li>
+                        <ul class="pages">    
+                        </ul>
+                    </li>
+                    <li class="btn btn-primary affter">下一页</li>
+                    <li id="all">总条数:</li>
+                </ul>
+            </div>
 
         </div>
         <div class="dqright">
@@ -347,5 +268,12 @@
                 </ul>
             </div>
         </div>
+
+        
     </div>
 </div>
+<!-- 分页 -->
+
+<script src="../src/page.js"></script>
+<script src="../src/project.js"></script>
+<script src="../lib/echarts.min.js"></script>
