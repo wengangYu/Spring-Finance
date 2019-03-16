@@ -1,61 +1,120 @@
 $(function () {
     //监听hash句柄
     window.onhashchange = hashFuc
+    getborrowlist()
 
     // //初始化加载模块
     hashFuc();
+    function hashFuc() {
+        switch (location.hash) {
+            // 首页
+            case '#index': $('#main').load('../moulde/index.html'); break;
+            case '#loan': $('#main').load('../moulde/loan.html'); break;
+            case '#lend': $('#main').load('../moulde/lend.html'); break;
+            case '#information': $('#main').load('../moulde/information.html'); break;
+            case '#security': $('#main').load('../moulde/security.html'); break;
+            case '#myaccount': $('#main').load('../moulde/myaccount.html'); break;
+            case '#reg': $('#main').load('../moulde/reg.html'); break;
+
+            // 我的账户单页面
+            case '#myaccount/Account-information': $('#right-box').load('../moulde/personal/Account-information.html'); break;
+            case '#myaccount/jiekuan': $('#right-box').load('../moulde/personal/jiekuan.html'); break;
+            case '#myaccount/liushui': $('#right-box').load('../moulde/personal/liushui.html'); break;
+            case '#myaccount/chongzhi': $('#right-box').load('../moulde/personal/chongzhi.html'); break;
+            case '#myaccount/renzhen': $('#right-box').load('../moulde/personal/renzhen.html'); break;
+            case '#myaccount/personal': $('#right-box').load('../moulde/personal/personal.html'); break;
+            case '#myaccount/huankuan': $('#right-box').load('../moulde/personal/huankuan.html'); break;
+            case '#myaccount/guanli': $('#right-box').load('../moulde/personal/guanli.html'); break;
+            case '#myaccount/dengji': $('#right-box').load('../moulde/personal/dengji.html'); break;
+            case '#myaccount/jilu': $('#right-box').load('../moulde/personal/jilu.html'); break;
+            case '#myaccount/shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html'); break;
+            case '#myaccount/xiugai': $('#right-box').load('../moulde/personal/xiugai.html'); break;
+
+            // 信息披露
+            case '#information/platformIntroduction': $('.main').load('../moulde/information/platformIntroduction.html'); break;
+            case '#information/team': $('.main').load('../moulde/information/team.html'); break;
+            case '#information/organization': $('.main').load('../moulde/information/organization.html'); break;
+            case '#information/operate': $('.main').load('../moulde/information/operate.html'); break;
+            case '#information/riskManagement': $('.main').load('../moulde/information/riskManagement.html'); break;
+            case '#information/riskeducation': $('.main').load('../moulde/information/riskeducation.html'); break;
+            case '#information/culture': $('.main').load('../moulde/information/culture.html'); break;
+            case '#information/dynamic': $('.main').load('../moulde/information/dynamic.html'); break;
+            case '#information/cooperativePartner': $('.main').load('../moulde/information/cooperativePartner.html'); break;
+            case '#information/contactUs': $('.main').load('../moulde/information/contactUs.html'); break;
+            case '#information/promise': $('.main').load('../moulde/information/promise.html'); break;
+
+            // 这个默认是首页，终极boos 哦
+            default: $('#main').load('../moulde/index.html'); break;
+            // default: $('#right-box').load('../moulde/personal/Account-information.html'); break;
+
+        }
+    }
     var mydate = new Date();
     mydate = mydate.getHours();
     var hl = hello(mydate);
     getSession(hl);
-    $('.setout').on('click',setout);
-    getborrowlist()
+    $('.setout').on('click', setout);
 })
 // 获取当前用户的session数据
 function getSession(hl) {
     //调用服务器获取session接口
     //    ajax请求跨域 ,不会携带cookie 不携带cookie session便没有意义
-    $.ajax({
-        type: 'get',
-        url: 'http://localhost:80/getsession.php',
-        xhrFields: {
-            withCredentials: true    //是否允许携带cookie
-        },
-        crossDomain: true,      //是否跨域请求
-        success: function (res) {
-            if (res != 'nologin') {
-
-                sessionStorage.setItem('username', res)
-                $('.login').html(`<a href="#">${res}</a>`)
-                $('.setout').html(`<a href='./login.html'>注销</a>`)
-                $('.reg').html(hl)
-            } else {
-                $(".login").html(`<a href="./login.html">请登录</a>`)
-            }
+    // $.ajax({
+    //     type: 'get',
+    //     url: 'http://localhost:80/getsession.php',
+    //     xhrFields: {
+    //         withCredentials: true    //是否允许携带cookie
+    //     },
+    //     crossDomain: true,      //是否跨域请求
+    //     success: function (res) {
+    //         if (res != 'nologin') {  
+    //             sessionStorage.setItem('username', res)
+    //             $('.login').html(`<a href="#">${res}</a>`)
+    //             $('.setout').html(`<a href='./login.html'>注销</a>`)
+    //             $('.reg').html(hl)
+    //         } else {
+    //             $(".login").html(`<a href="./login.html">请登录</a>`)
+    //         }
+    //     }
+    // })
+    var success = function (res) {
+        if (res != 'nologin') {
+            sessionStorage.setItem('username', res)
+            $('.login').html(`<a href="#">${res}</a>`)
+            $('.setout').html(`<a href='./login.html'>注销</a>`)
+            $('.reg').html(hl)
+        } else {
+            $(".login").html(`<a href="./login.html">请登录</a>`)
         }
-    })
+    }
 
+    apiget('/getsession.php', success)
 }
 
 
 // 注销函数
 function setout() {
-    $.ajax(
-        {
-            type: 'get',
-            url: 'http://localhost:80/setout.php',
-            xhrFields: {
-                withCredentials: true  //是否允许携带cookie
-            },
-            crossDomain: true,  //是否跨域请求
-            success: function (res) {
-                $('.setout').html('');
-                $(".login").html(`<a href="./login.html">请登录</a>`)
-            }
-        }
-    )
+    // $.ajax(
+    //     {
+    //         type: 'get',
+    //         url: 'http://localhost:80/setout.php',
+    //         xhrFields: {
+    //             withCredentials: true  //是否允许携带cookie
+    //         },
+    //         crossDomain: true,  //是否跨域请求
+    //         success: function (res) {
+    //             $('.setout').html('');
+    //             $(".login").html(`<a href="./login.html">请登录</a>`)
+    //         }
+    //     }
+    // )
     // 清除该用户的seesion  后台
     // 重定向到登录页面
+    var success = function (res) {
+        $('.setout').html('');
+        $(".login").html(`<a href="./login.html">请登录</a>`)
+    }
+    apiget('/setout.php', success)
 
 }
 
@@ -90,66 +149,14 @@ function hello(localdate) {
     return hello;
 }
 
-//哈希地址模块
-function hashFuc() {
-    switch (location.hash) {
-        // 首页
-        case '#index': $('#main').load('../moulde/index.html'); break;
-        case '#loan': $('#main').load('../moulde/loan.html'); break;
-        case '#lend': $('#main').load('../moulde/lend.html'); break;
-        case '#information': $('#main').load('../moulde/information.html'); break;
-        case '#security': $('#main').load('../moulde/security.html'); break;
-        case '#myaccount': $('#main').load('../moulde/myaccount.html'); break;
-        case '#myaccount/huankuan': $('#right-box').load('../moulde/personal/huankuan.html'); break;
-        case '#myaccount/guanli': $('#right-box').load('../moulde/personal/guanli.html'); break;
-        case '#myaccount/dengji': $('#right-box').load('../moulde/personal/dengji.html'); break;
-        case '#myaccount/jilu': $('#right-box').load('../moulde/personal/jilu.html'); break;
-        case '#myaccount/shoukuan': $('#right-box').load('../moulde/personal/shoukuan.html'); break;
-        case '#reg': $('#main').load('../moulde/reg.html'); break;
-        // 我的账户单页面
-        case '#myaccount/Account-information': $('#right-box').load('../moulde/personal/Account-information.html'); break;
-        case '#myaccount/jiekuan': $('#right-box').load('../moulde/personal/jiekuan.html'); break;
-        case '#myaccount/liushui': $('#right-box').load('../moulde/personal/liushui.html'); break;
-        case '#myaccount/chongzhi': $('#right-box').load('../moulde/personal/chongzhi.html'); break;
-        case '#myaccount/renzhen': $('#right-box').load('../moulde/personal/renzhen.html'); break;
-        case '#myaccount/personal': $('#right-box').load('../moulde/personal/personal.html'); break;
-        case '#myaccount/xiugai': $('#right-box').load('../moulde/personal/xiugai.html'); break;
-        // 信息披露
-        case '#information/platformIntroduction': $('.main').load('../moulde/information/platformIntroduction.html'); break;
-        case '#information/team': $('.main').load('../moulde/information/team.html'); break;
-        case '#information/organization': $('.main').load('../moulde/information/organization.html'); break;
-        case '#information/operate': $('.main').load('../moulde/information/operate.html'); break;
-        case '#information/riskManagement': $('.main').load('../moulde/information/riskManagement.html'); break;
-        case '#information/riskeducation': $('.main').load('../moulde/information/riskeducation.html'); break;
-        case '#information/culture': $('.main').load('../moulde/information/culture.html'); break;
-        case '#information/dynamic': $('.main').load('../moulde/information/dynamic.html'); break;
-        case '#information/cooperativePartner': $('.main').load('../moulde/information/cooperativePartner.html'); break;
-        case '#information/contactUs': $('.main').load('../moulde/information/contactUs.html'); break;
-        case '#information/promise': $('.main').load('../moulde/information/promise.html'); break;
 
-        // 这个默认是首页，终极boos 哦
-        default: $('#main').load('../moulde/index.html'); break;
-        // default: $('#right-box').load('../moulde/personal/Account-information.html'); break;
-
-    }
-}
-
-
-
-function ajax(page){
-    $.ajax({
-        type: 'post',
-        url: 'http://localhost:80/pages.php',
-        data: { currentpage: page, pagesize: 3 },
-        xhrFields: {
-            withCredentials: true  //是否允许携带cookie
-        },
-        crossDomain: true,  //是否跨域请求
-        success: function (res) {
-            var str = '';
-            var rs = JSON.parse(res);
-            for (const i of rs) {
-                str+=`<li class="dqbox">
+function ajax(page) {
+    var data = { currentpage: page, pagesize: 3 }
+    var success = function (res) {
+        var str = '';
+        var rs = JSON.parse(res);
+        for (const i of rs) {
+            str += `<li class="dqbox">
             <p class="tyb">
                 <span class="xin">新</span>${i['type']}${i['number']}
 
@@ -178,53 +185,71 @@ function ajax(page){
                 ${i['state']}
                 </li>
             </ul>
-        </li>`;
-        
-
-        $('.dqleft>ul').html(str);
-
-
-                // 
-            }
-
+          </li>`;
+            $('.dqleft>ul').html(str);
         }
-
-
-    })
+    }
+    apipost('/pages.php', success)
 }
-function getborrowlist() {  
-    $.ajax({
-        type: 'get',
-        url: 'http://localhost:80/getborrowlist.php',
-        xhrFields: {
-            withCredentials: true    //是否允许携带cookie
-        },
-        crossDomain: true,      //是否跨域请求
-        success: function (res) {
-           let list  = JSON.parse(res)
-           refirshTable(list)
-           
+function getborrowlist() {
+       var success=function (res) {
+            let list = JSON.parse(res)
+            refirshTable(list)
         }
-    })
+        apiget('/getborrowlist.php',success)
+}
+// function refirshTable(list) {
+//     console.log(list);
+
+//     var str = ``
+//     for (var obj of list) {
+//         str += `<tr>
+//                     <td>${obj.nickname}</td>
+//                     <td id="l_purpose">${obj.l_purpose}</td>
+//                     <td id="Interest">${obj.Interest}.00%</td>
+//                     <td id="l_sum">${obj.l_sum}</td>
+//                     <td id="l_repayment_method">${obj.l_repayment_method}</td>
+//                     <td id="investmoney">${((obj.investmoney / obj.l_sum) * 100).toFixed(2)}%</td>
+//                     <td id="l_btn"><button type="button" class="btn btn-danger">查看详情</button>
+//                     </td>
+//                 </tr>`
+//     }
+
+//     $('#borrow_list_table').html(str)
+
+// }
+
+
+
+// 点击渲染列表进入投资页面
+function goinvest(res){
+    
+    res = JSON.stringify(res)
+    //当点击查看详情的时候。跳转到invest页面，带着id过去
+    sessionStorage.setItem('obb',res)
+    location.href = 'http://172.16.9.37:3000/invest.html';
+    
 }
 
+// 渲染借款列表
 function refirshTable(list){
     console.log(list);
-    
+
     var str = ``
-    for(var obj of list){
-        str +=`<tr>
+    for (var obj of list) {
+        str += `<tr>
                     <td>${obj.nickname}</td>
                     <td id="l_purpose">${obj.l_purpose}</td>
                     <td id="Interest">${obj.Interest}.00%</td>
                     <td id="l_sum">${obj.l_sum}</td>
                     <td id="l_repayment_method">${obj.l_repayment_method}</td>
                     <td id="investmoney">${((obj.investmoney / obj.l_sum) * 100).toFixed(2)}%</td>
-                    <td id="l_btn"><button type="button" class="btn btn-danger">查看详情</button>
+                    <td id="l_btn"><button type="button" class="btn btn-danger" onclick='goinvest(${JSON.stringify(obj)})' >查看详情</button>
                     </td>
                 </tr>`
     }
 
     $('#borrow_list_table').html(str)
-    
+
 }
+

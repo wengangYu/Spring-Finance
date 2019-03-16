@@ -36,12 +36,12 @@ date_default_timezone_set("Asia/Shanghai");
         
         mysqli_query($conn,"UPDATE user SET lastlogintime='{$lastime}' WHERE id='{$id}';");
         // echo "UPDATE user SET lastlogintime= '{$lastime}' WHERE id='{$id}'";
-		header("Location: http://localhost:3000/");  
+		header("Location: http://172.16.9.37:3000/");  
     }else{
         // 失败 停留当前页面并刷新
         // echo 'fail'; 
         // ?后面叫query 查询
-        header("Location: http://localhost:3000/login.html?fail=fail");  
+        header("Location: http://172.16.9.37:3000/login.html?fail=fail");  
     };
     
 ?>

@@ -31,7 +31,7 @@ function getsize() {
     console.log('总页数：' + pages, '当前页' + currentpage, '每页多：' + size)
     $.ajax({
         type: 'post',
-        url: 'http://localhost:80/pages.php',
+        url: 'http://172.16.9.37:80/pages.php',
         data: { currentpage: currentpage, pagesize: size },
         xhrFields: {
             withCredentials: true  //是否允许携带cookie
@@ -125,7 +125,7 @@ function allpage() {
     //发送ajax请求到projec查询数据总数
     $.ajax({
         type: 'get',
-        url: 'http://localhost:80/page.php',
+        url: 'http://172.16.9.37:80/page.php',
         xhrFields: {
             withCredentials: true  //是否允许携带cookie
         },
@@ -160,7 +160,7 @@ function al() {
     $(`.pages>li:nth-of-type(${currentpage})`).css('backgroundColor', '#ccc');
     $.ajax({
         type: 'post',
-        url: 'http://localhost:80/pages.php',
+        url: 'http://172.16.9.37:80/pages.php',
         data: { currentpage: currentpage, pagesize: size },
         xhrFields: {
             withCredentials: true  //是否允许携带cookie

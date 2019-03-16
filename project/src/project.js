@@ -8,7 +8,7 @@ function projectlist() {
 function ajax(page){
     $.ajax({
         type: 'post',
-        url: 'http://localhost:80/pages.php',
+        url: 'http://172.16.9.37:80/pages.php',
         data: { currentpage: page, pagesize: 3 },
         xhrFields: {
             withCredentials: true  //是否允许携带cookie

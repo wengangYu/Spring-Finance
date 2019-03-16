@@ -6,5 +6,5 @@ if($_SESSION){
     // 清除用户的seeion
     session_destroy();
     // 重定向到登录页面
-    header("Location: http://localhost:3000/login.html");  
+    header("Location: http://172.16.9.37:3000/login.html");  
 }

@@ -18,7 +18,7 @@ function btChange() {
     function getUserEdu() {
         $.ajax({
             type: 'get',
-            url: 'http://localhost:80/borrow-getedu.php',
+            url: 'http://172.16.9.37:80/borrow-getedu.php',
             xhrFields: {
                 withCredentials: true //是否允许携带cookie
             },

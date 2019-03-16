@@ -14,6 +14,6 @@
     $data = mysqli_query($conn,$sql);
     
     if($data){
-        header("Location: http://localhost:3000/");
+        header("Location: http://172.16.9.37:3000/");
     }
 ?>

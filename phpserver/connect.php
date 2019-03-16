@@ -1,7 +1,7 @@
 <?php
 // 连接数据库
 header('Content-Type: text/html;charset=utf-8');
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: http://172.16.9.37:3000");
 header('Access-Control-Allow-Headers:Authorization');
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Credentials: true");

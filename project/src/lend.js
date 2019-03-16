@@ -5,7 +5,7 @@ $(function(){
 function projectlist() {
     $.ajax({
         type: 'get',
-        url: 'http://localhost:80/projectlist.php',
+        url: 'http://172.16.9.37:80/projectlist.php',
         xhrFields: {
             withCredentials: true  //是否允许携带cookie
         },

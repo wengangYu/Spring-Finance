@@ -63,3 +63,21 @@ $(function () {
     }
 
 })
+
+// function btn(){
+//     var name = checkname();
+//     var pwd = checkpwd();
+//     var pwd1 = checkRepwd();
+//     if(name&&pwd&&pwd1){
+//         var username = $('#name').val();
+//         var pwds = $('#pwd').val();
+        
+//         var success = function(res){
+//             alert('注册成功')
+//        }
+//        apipost(api,success,data={'username':username,'pwds':pwds})
+//     }
+//     alert('信息有误,请重新填写')
+//         return false;
+    
+// }

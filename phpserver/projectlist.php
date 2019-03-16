@@ -1,7 +1,6 @@
 <?php
     require("./connect.php");//引入跨域文件
     header('Content-Type: text/html;charset=utf-8');
-    $conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
 
     // 构造sql
     $sql = "select * from project";

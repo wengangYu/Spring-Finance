@@ -14,7 +14,6 @@
     
     $sql = "UPDATE user SET pwd='$pwd', phone='$phone', email='$email', education='$edu', nickname='$nickname' WHERE id='$id' ";
 
-    $conn = mysqli_connect('localhost','root','root','spring',3306) or die('Error');
     $data = mysqli_query($conn,$sql);
     
     if($data){

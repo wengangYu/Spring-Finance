@@ -9,6 +9,6 @@ if ($_POST){  //不要使用isset判断，$_POST数据已经存在，会返回�
     echo $username;
     $isql = "insert into user(username,pwd) values('{$username}','{$pwd}')";
     mysqli_query($conn,$isql);
-    header("Location:http://localhost:3000/");
-    }
+    header("Location:http://172.16.9.37:3000/login.html");
+    };
 
